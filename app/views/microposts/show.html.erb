@@ -1,0 +1,43 @@
+<% provide(:title, @micropost.id) %>
+
+<%= link_to "Top", root_path %> > <%= link_to @category.name, root_path %>
+<h1><%= @micropost.title %></h1>
+<p><%= simple_format @micropost.content %></p>
+
+
+<% if @micropost.code.present? %>
+<div class="container">
+  <div class="row">
+  <div class="col-sm-5 order-sm-2">
+    <h3>デモ</h3>
+    <iframe id="demo" width="400px" height="200px"></iframe>
+  </div>
+  <div id="divCode" class="col-sm-7 order-sm-1">
+    <h3>コード</h3>
+    <pre><code id="code"><%= @micropost.code %></code></pre>
+  </div>
+ </div>
+</div>
+
+<script>
+
+ (function() {
+  'use strict';
+
+  function setCode() {
+    var xxx = document.getElementById('code').textContent;
+    // console.log(xxx);
+    var blob = new Blob([xxx], { type: 'text/html' });
+    // console.log(blob);
+    document.getElementById('demo').src = URL.createObjectURL(blob);
+  }
+
+  // window.onload = function(){
+    document.addEventListener("turbolinks:load", function(){
+    console.log("window load");
+    setCode();
+   })
+
+  })();
+</script>
+<% end %>

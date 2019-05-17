@@ -1,0 +1,23 @@
+<% provide(:title, "SiteMap") %>
+<%= link_to "Top", root_path %> > <%= yield(:title)  %>
+
+<%= search_form_for @q, url: sitemap_path do |f| %>
+<%= f.label :title_start, "検索" %>
+<%= f.search_field :title_or_content_cont %>
+<%= f.submit  class: "btn btn-sm"%>
+<% end %>
+
+  <table class="table table-striped">
+    <thead>
+      <th  class="col-xs-2 col-sm-4" scope="col">タイトル</th>
+      <th  class="col-xs-4 col-sm-8" scope="col">概要</th>
+    </thead>
+    <tbody>
+   <% @microposts.each do |f| %>
+    <tr>
+      <td><%= link_to f.title, micropost_path(f.id)%></td>
+      <td><%= f.content.truncate(120) %></td>
+    </tr>
+    <% end %>
+    </tbody>
+  </table>

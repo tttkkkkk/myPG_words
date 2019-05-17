@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  key: MyText
+  zumi: false
+  zumi_dt: 2019-05-17
+
+two:
+  key: MyText
+  zumi: false
+  zumi_dt: 2019-05-17

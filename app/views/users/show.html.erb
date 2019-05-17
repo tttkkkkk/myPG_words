@@ -1,0 +1,52 @@
+<% provide(:title, @user.name) %>
+
+  <% if logged_in? %>
+     <div class="row">
+       <aside class="col-sm-3">
+         <h3>new post</h3>
+         <section class="micropost_form">
+           <%= render 'shared/micropost_form' %>
+         </section>
+       </aside>
+       <div class="col-sm-9">
+         <h3>Micropost Feed</h3>
+         <%= render 'shared/feed' %>
+       </div>
+     </div>
+
+   <% else %>
+
+   <div class="row">
+     <aside class="col-sm-1">
+       <section class="user_info">
+         <h1>
+           <%= @user.name %>
+         </h1>
+       </section>
+     </aside>
+    <div class="col-sm-11">
+      <% if @user.microposts.any? %>
+        <h3>Microposts (<%= @user.microposts.count %>)</h3>
+
+        <table class="table table-striped">
+          <thead>
+            <th scope="col">タイトル</th>
+            <th scope="col">概要</th>
+          </thead>
+          <tbody>
+          <% @microposts.each do |f| %>
+          <tr>
+            <td><%= link_to f.title, micropost_path(f.id)%></td>
+            <td><%= f.content %></td>
+          </tr>
+          <% end %>
+          </tbody>
+        </table>
+
+        <%= will_paginate @microposts %>
+      <% end %>
+    </div>
+  <% end %>
+
+
+</div>

@@ -1,0 +1,24 @@
+<% provide(:title, "") %>
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h5>Top</h5>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+        <%= link_to "JavaScript", js_path, class: "btn btn-block btn-primary" %>
+        </div>
+        <div class="col-sm-1" style="margin-bottom:10px;"></div>
+        <div class="col-sm-3">
+          <%= link_to "Rails", rails_path, class: "btn btn-block btn-primary" %>
+        </div>
+        <div class="col-sm-1" style="margin-bottom:10px;"></div>
+        <div class="col-sm-3">
+          <%= link_to "jQuery", jquery_path, class: "btn btn-block btn-primary" %>
+        </div>
+       </div>
+     </div>
+   </div>
+  </body>
+</html>
