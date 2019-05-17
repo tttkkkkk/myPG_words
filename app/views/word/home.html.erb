@@ -3,6 +3,8 @@
  <body>
    <div class="container">
 
+     <%= link_to "add key!", new_word_path %>
+
      <div class="container">
       <h3>Please check word if you know ..</h3>
       <table class="table table-striped">
@@ -12,8 +14,8 @@
           <th  class="col-xs-1" scope="col">check</th>
         </thead>
         <tbody>
-        <% if !@Words.nil? %>
-        <% @Words.each do |f| %>
+        <% if !@words.nil? %>
+        <% @words.each do |f| %>
         <tr>
 
           <td><%= f.key %></td>

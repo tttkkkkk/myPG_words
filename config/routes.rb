@@ -4,5 +4,4 @@ Rails.application.routes.draw do
   root 'word#home'
   resources :word
 
-
 end

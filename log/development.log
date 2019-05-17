@@ -29605,3 +29605,787 @@ Processing by WordController#home as HTML
 Completed 200 OK in 932ms (Views: 906.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-05-17 22:48:46 +0900
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1084ms (Views: 1056.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-17 22:48:58 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 310ms (Views: 294.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/word/new" for ::1 at 2019-05-17 22:49:00 +0900
+Processing by WordController#new as HTML
+  Rendering word/new.html.erb within layouts/application
+  Rendered word/new.html.erb within layouts/application (162.4ms)
+Completed 500 Internal Server Error in 209ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `words_path' for #<#<Class:0x0000000006b1eb98>:0x000000000cafaeb8>
+Did you mean?  word_path):
+    2: 
+    3: <div class="row">
+    4:   <div class="col-md-6 col-md-offset-3">
+    5:     <%= form_for(@word) do |f| %>
+    6:       <%= f.label :key %>
+    7:       <%= f.text_field :key %>
+    8: 
+  
+app/views/word/new.html.erb:5:in `_app_views_word_new_html_erb__949841171_106421320'
+Started GET "/word/new" for ::1 at 2019-05-17 22:50:20 +0900
+Processing by WordController#new as HTML
+  Rendering word/new.html.erb within layouts/application
+  Rendered word/new.html.erb within layouts/application (226.2ms)
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `words_path' for #<#<Class:0x000000000af12098>:0x000000000af71fc0>
+Did you mean?  word_path):
+    2: 
+    3: <div class="row">
+    4:   <div class="col-md-6 col-md-offset-3">
+    5:     <%= form_for(@word) do |f| %>
+    6:       <%= f.label :key %>
+    7:       <%= f.text_field :key %>
+    8: 
+  
+app/views/word/new.html.erb:5:in `_app_views_word_new_html_erb__949841171_91789400'
+Started GET "/word/new" for ::1 at 2019-05-17 22:55:27 +0900
+Processing by WordController#new as HTML
+  Rendering word/new.html.erb within layouts/application
+  Rendered word/new.html.erb within layouts/application (161.1ms)
+Completed 500 Internal Server Error in 230ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `words_path' for #<#<Class:0x000000000b6d4f60>:0x000000000b6cf060>
+Did you mean?  word_path):
+    2: 
+    3: <div class="row">
+    4:   <div class="col-md-6 col-md-offset-3">
+    5:     <%= form_for(@word) do |f| %>
+    6:       <%= f.label :key %>
+    7:       <%= f.text_field :key %>
+    8: 
+  
+app/views/word/new.html.erb:5:in `_app_views_word_new_html_erb__949841171_95857680'
+Started GET "/word/new" for ::1 at 2019-05-17 22:56:07 +0900
+Processing by WordController#new as HTML
+Completed 500 Internal Server Error in 84ms
+
+
+  
+NoMethodError (undefined method `put' for #<WordController:0x000000000b2acde8>
+Did you mean?  putc
+               puts):
+  
+app/controllers/word_controller.rb:8:in `new'
+Started GET "/word/new" for ::1 at 2019-05-17 22:56:21 +0900
+Processing by WordController#new as HTML
+  Rendering word/new.html.erb within layouts/application
+  Rendered word/new.html.erb within layouts/application (208.2ms)
+Completed 500 Internal Server Error in 284ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `words_path' for #<#<Class:0x000000000b64ea00>:0x000000000b64c4a8>
+Did you mean?  word_path):
+    2: 
+    3: <div class="row">
+    4:   <div class="col-md-6 col-md-offset-3">
+    5:     <%= form_for(@word) do |f| %>
+    6:       <%= f.label :key %>
+    7:       <%= f.text_field :key %>
+    8: 
+  
+app/views/word/new.html.erb:5:in `_app_views_word_new_html_erb__949841171_95582660'
+Started GET "/word/new" for ::1 at 2019-05-17 22:57:12 +0900
+Processing by WordController#new as HTML
+  Rendering word/new.html.erb within layouts/application
+  Rendered word/new.html.erb within layouts/application (206.1ms)
+Completed 500 Internal Server Error in 286ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `words_path' for #<#<Class:0x000000000afa14f0>:0x000000000b0936d8>
+Did you mean?  word_path):
+    2: 
+    3: <div class="row">
+    4:   <div class="col-md-6 col-md-offset-3">
+    5:     <%= form_for(@word) do |f| %>
+    6:       <%= f.label :key %>
+    7:       <%= f.text_field :key %>
+    8: 
+  
+app/views/word/new.html.erb:5:in `_app_views_word_new_html_erb__949841171_92083660'
+Started GET "/word/new" for ::1 at 2019-05-17 23:00:56 +0900
+Processing by WordController#new as HTML
+  Rendering word/new.html.erb within layouts/application
+  Rendered word/new.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 3.0ms)
+
+
+  
+SyntaxError (C:/Users/USER/myPG_Words/app/views/word/new.html.erb:5: syntax error, unexpected tLABEL
+ppend=  form_for(@word) , url: word_path do |f| @output_buff
+                              ^):
+  
+app/views/word/new.html.erb:5: syntax error, unexpected tLABEL
+Started GET "/word/new" for ::1 at 2019-05-17 23:01:46 +0900
+Processing by WordController#new as HTML
+  Rendering word/new.html.erb within layouts/application
+  Rendered word/new.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"word"}, missing required keys: [:id]):
+    2: 
+    3: <div class="row">
+    4:   <div class="col-md-6 col-md-offset-3">
+    5:     <%= form_for @word  , url: word_path do |f| %>
+    6:       <%= f.label :key %>
+    7:       <%= f.text_field :key %>
+    8: 
+  
+app/views/word/new.html.erb:5:in `_app_views_word_new_html_erb__949841171_105127640'
+Started GET "/word/new" for ::1 at 2019-05-17 23:02:09 +0900
+Processing by WordController#new as HTML
+  Rendering word/new.html.erb within layouts/application
+  Rendered word/new.html.erb within layouts/application (452.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 797ms (Views: 780.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/word/new" for ::1 at 2019-05-17 23:02:16 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/word/new"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/word/new" for ::1 at 2019-05-17 23:04:13 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/word/new"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/word/new" for ::1 at 2019-05-17 23:04:25 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/word/new"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/word/new" for ::1 at 2019-05-17 23:04:59 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/word/new"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/word/new" for ::1 at 2019-05-17 23:05:03 +0900
+Processing by WordController#new as HTML
+  Rendering word/new.html.erb within layouts/application
+  Rendered word/new.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"word"}, missing required keys: [:id]):
+    2: 
+    3: <div class="row">
+    4:   <div class="col-md-6 col-md-offset-3">
+    5:     <%= form_for @word  , url: word_path do |f| %>
+    6:       <%= f.label :key %>
+    7:       <%= f.text_field :key %>
+    8: 
+  
+app/views/word/new.html.erb:5:in `_app_views_word_new_html_erb__949841171_107281080'
+Started GET "/word/new" for ::1 at 2019-05-17 23:06:09 +0900
+Processing by WordController#new as HTML
+  Rendering word/new.html.erb within layouts/application
+  Rendered word/new.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"hoge"}):
+    2: 
+    3: <div class="row">
+    4:   <div class="col-md-6 col-md-offset-3">
+    5:     <%= form_for @word  , :url => { :controller => :hoge, :action => :create } do |f| %>
+    6:       <%= f.label :key %>
+    7:       <%= f.text_field :key %>
+    8: 
+  
+app/views/word/new.html.erb:5:in `_app_views_word_new_html_erb__949841171_85244400'
+Started GET "/word/new" for ::1 at 2019-05-17 23:06:28 +0900
+Processing by WordController#new as HTML
+  Rendering word/new.html.erb within layouts/application
+  Rendered word/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 348ms (Views: 333.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/word" for ::1 at 2019-05-17 23:06:32 +0900
+Processing by WordController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EGUdUdA9kuuITmIsxj8JUJIzLhK3Q9W9fCWc3dGocPWqQBZy0FbWcy0l+5vjASppr7MAgCTv//gorgnkBVjjyg==", "word"=>{"key"=>"ss"}, "commit"=>"Add keyword"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "ss"], ["created_at", "2019-05-17 14:06:32.121431"], ["updated_at", "2019-05-17 14:06:32.121431"]]
+  [1m[35m (19.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/word/5
+Completed 302 Found in 28ms (ActiveRecord: 20.4ms)
+
+
+Started GET "/word/5" for ::1 at 2019-05-17 23:06:32 +0900
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for WordController):
+  
+actionpack (5.1.7) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/word/5" for ::1 at 2019-05-17 23:09:01 +0900
+Processing by WordController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering word/show.html.erb within layouts/application
+  Rendered word/show.html.erb within layouts/application (19.0ms)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `any?' for #<Word:0x0000000009f31a20>):
+    1: <% if @word.any? %>
+    2: <h3><%= @word.key %></h3>
+    3: <% end %>
+  
+app/views/word/show.html.erb:1:in `_app_views_word_show_html_erb__544986877_83383840'
+Started GET "/word/5" for ::1 at 2019-05-17 23:09:22 +0900
+Processing by WordController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering word/show.html.erb within layouts/application
+  Rendered word/show.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 339ms (Views: 322.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-17 23:09:28 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 332ms (Views: 317.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/word/new" for ::1 at 2019-05-17 23:09:32 +0900
+Processing by WordController#new as HTML
+  Rendering word/new.html.erb within layouts/application
+  Rendered word/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 316ms (Views: 290.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/word" for ::1 at 2019-05-17 23:09:36 +0900
+Processing by WordController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xzKYoXKXOJ9VxEP6riPWc8LiK5/JF4VqWBCkP6YysMXZFfCZD8GrSXrT6cGuefVszZYt2XkyV6VjtZn1XVhdkQ==", "word"=>{"key"=>"hoge"}, "commit"=>"Add keyword"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "hoge"], ["created_at", "2019-05-17 14:09:36.386146"], ["updated_at", "2019-05-17 14:09:36.386146"]]
+  [1m[35m (19.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/word/6
+Completed 302 Found in 31ms (ActiveRecord: 21.0ms)
+
+
+Started GET "/word/6" for ::1 at 2019-05-17 23:09:36 +0900
+Processing by WordController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering word/show.html.erb within layouts/application
+  Rendered word/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 383ms (Views: 352.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-17 23:09:38 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 310ms (Views: 295.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/word/new" for ::1 at 2019-05-17 23:10:07 +0900
+Processing by WordController#new as HTML
+  Rendering word/new.html.erb within layouts/application
+  Rendered word/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 321ms (Views: 296.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/word" for ::1 at 2019-05-17 23:10:12 +0900
+Processing by WordController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WDFAYEbXRaLurixL5Lc03g9KFRvBhyqR2P7yE4Yw5QVGFihYO4HWdMG5hnDk7RfBAD4TXXGi+F7jW8/ZfVoIUQ==", "word"=>{"key"=>"aaa"}, "commit"=>"Add keyword"}
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "aaa"], ["created_at", "2019-05-17 14:10:12.752070"], ["updated_at", "2019-05-17 14:10:12.752070"]]
+  [1m[35m (19.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering word/new.html.erb within layouts/application
+  Rendered word/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 382ms (Views: 354.0ms | ActiveRecord: 21.0ms)
+
+
+Started PATCH "/word" for ::1 at 2019-05-17 23:10:18 +0900
+  
+ActionController::RoutingError (No route matches [PATCH] "/word"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PATCH "/word" for ::1 at 2019-05-17 23:10:39 +0900
+  
+ActionController::RoutingError (No route matches [PATCH] "/word"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/word" for ::1 at 2019-05-17 23:10:58 +0900
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for WordController):
+  
+actionpack (5.1.7) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-05-17 23:10:59 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1218ms (Views: 342.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/word/new" for ::1 at 2019-05-17 23:11:03 +0900
+Processing by WordController#new as HTML
+  Rendering word/new.html.erb within layouts/application
+  Rendered word/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 274ms (Views: 257.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/word" for ::1 at 2019-05-17 23:11:04 +0900
+Processing by WordController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QDqm3Id/cY0+Z9N33MjCr/vM984+WY7e4s3ZPSxFA7deHc7k+iniWxFweUzckuGw9LjxiI58XBHZaOT31y/u4w==", "word"=>{"key"=>""}, "commit"=>"Add keyword"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", ""], ["created_at", "2019-05-17 14:11:04.754056"], ["updated_at", "2019-05-17 14:11:04.754056"]]
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000new
+Completed 302 Found in 35ms (ActiveRecord: 27.0ms)
+
+
+Started POST "/word" for ::1 at 2019-05-17 23:11:13 +0900
+Processing by WordController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"506odK7OxGikv1t6BAGiazioISVdsGuMlOaGhSEzUvhda6NXrqWA8AHUws0hP4FSBSgPt84cQcnAbRO89cPBxw==", "word"=>{"key"=>"aaa"}, "commit"=>"Add keyword"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "aaa"], ["created_at", "2019-05-17 14:11:14.018080"], ["updated_at", "2019-05-17 14:11:14.018080"]]
+  [1m[35m (17.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000new
+Completed 302 Found in 26ms (ActiveRecord: 19.8ms)
+
+
+Started POST "/word" for ::1 at 2019-05-17 23:11:26 +0900
+Processing by WordController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"506odK7OxGikv1t6BAGiazioISVdsGuMlOaGhSEzUvhda6NXrqWA8AHUws0hP4FSBSgPt84cQcnAbRO89cPBxw==", "word"=>{"key"=>"aaa"}, "commit"=>"Add keyword"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "aaa"], ["created_at", "2019-05-17 14:11:26.920693"], ["updated_at", "2019-05-17 14:11:26.920693"]]
+  [1m[35m (18.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/word/10
+Completed 302 Found in 40ms (ActiveRecord: 19.6ms)
+
+
+Started GET "/word/10" for ::1 at 2019-05-17 23:11:26 +0900
+Processing by WordController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering word/show.html.erb within layouts/application
+  Rendered word/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 386ms (Views: 356.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-17 23:11:30 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 388ms (Views: 373.6ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/word/10" for ::1 at 2019-05-17 23:11:38 +0900
+Processing by WordController#update as HTML
+  Parameters: {"authenticity_token"=>"bwvXwr6ppxUm09g0QBe1MRqs3mUJ6quF8zzXZgSCfTTVLtzhvsLjjYO4QYNlKZYIJyzw95pGgcCnt0Jf0HLuCw==", "id"=>"10"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "words" SET "zumi" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["zumi", "t"], ["updated_at", "2019-05-17 14:11:38.299711"], ["id", 10]]
+  [1m[35m (19.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 31ms (ActiveRecord: 20.5ms)
+
+
+Started GET "/" for ::1 at 2019-05-17 23:11:38 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 388ms (Views: 359.4ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/7" for ::1 at 2019-05-17 23:11:40 +0900
+Processing by WordController#update as HTML
+  Parameters: {"authenticity_token"=>"blTw8N33fNPizZBuyhxxheN2rEcnzLXfikKS7fklkvTUcfvT3Zw4S0emCdnvIlK83vaC1bRgn5reyQfULdUByw==", "id"=>"7"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "words" SET "zumi" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["zumi", "t"], ["updated_at", "2019-05-17 14:11:40.288344"], ["id", 7]]
+  [1m[35m (26.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 35ms (ActiveRecord: 29.8ms)
+
+
+Started GET "/" for ::1 at 2019-05-17 23:11:40 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 416ms (Views: 387.2ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/6" for ::1 at 2019-05-17 23:11:41 +0900
+Processing by WordController#update as HTML
+  Parameters: {"authenticity_token"=>"rApodYqq7LZZnd6Bs1Xzyh9iawhuZDcNjghBN1ExZb8WL2NWisGoLvz2RzaWa9DzIuJFmv3IHUjag9QOhcH2gA==", "id"=>"6"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "words" SET "zumi" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["zumi", "t"], ["updated_at", "2019-05-17 14:11:41.235936"], ["id", 6]]
+  [1m[35m (30.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 37ms (ActiveRecord: 33.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-17 23:11:41 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 430ms (Views: 401.8ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/word/4" for ::1 at 2019-05-17 23:11:42 +0900
+Processing by WordController#update as HTML
+  Parameters: {"authenticity_token"=>"gRw3APe8QyZ7aouJJF3r/UT53qiUefCrzlqBSz3TvFs7OTwj99cHvt4BEj4BY8jEeXnwOgfV2u6a0RRy6SMvZA==", "id"=>"4"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "words" SET "zumi" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["zumi", "t"], ["updated_at", "2019-05-17 14:11:42.722175"], ["id", 4]]
+  [1m[35m (23.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 31ms (ActiveRecord: 24.4ms)
+
+
+Started GET "/" for ::1 at 2019-05-17 23:11:42 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 374ms (Views: 348.8ms | ActiveRecord: 0.0ms)
+
+
