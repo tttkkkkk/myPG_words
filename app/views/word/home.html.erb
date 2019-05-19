@@ -3,32 +3,33 @@
  <body>
    <div class="container">
 
-     <%= link_to "add key!", new_word_path %>
+     <%= link_to "ADD", new_word_path , class: 'btn btn-success'%>
+     <%= link_to 'ALL DELETE', del_all_word_path(0), method: :delete, class:'pull-right btn btn-danger' %>
 
      <div class="container">
       <h3>Please check word if you know ..</h3>
       <table class="table table-striped">
         <thead>
-          <th  class="col-xs-3" scope="col">KeyWord</th>
-          <th  class="col-xs-2" scope="col">Button</th>
+          <th  class="col-xs-4" scope="col">KeyWord</th>
+          <th  class="col-xs-1" scope="col">OK</th>
+          <th  class="col-xs-1" scope="col">NG</th>
           <th  class="col-xs-1" scope="col">check</th>
+          <th  class="col-xs-1" scope="col"></th>
         </thead>
         <tbody>
         <% if !@words.nil? %>
         <% @words.each do |f| %>
         <tr>
-
           <td><%= f.key %></td>
-
-          <td><%= link_to '+', word_path(f), method: :put, class: 'btn btn-primary', data:{disable_with:'送信中..'} %></td>
-
+          <td><%= link_to '+', upd_add_word_path(f), method: :put, class: 'btn btn-primary', data:{disable_with:'..'} %></td>
+          <td><%= link_to '-', upd_mns_word_path(f), method: :put, class: 'btn btn-primary', data:{disable_with:'..'} %></td>
           <td><%= 'ok' if f.zumi  %></td>
+          <td><%= link_to 'x', word_path(f), method: :delete, class: 'command' %></td>
         </tr>
         <% end %>
         <% end %>
         </tbody>
       </table>
-
    </div>
  </body>
 </html>

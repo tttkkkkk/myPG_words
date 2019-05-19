@@ -4,7 +4,7 @@
   <div class="col-md-6 col-md-offset-3">
     <%= form_for @word  , :url => { :controller => :word, :action => :create } do |f| %>
       <%= f.label :key %>
-      <%= f.text_field :key %>
+      <%= f.text_area :key , :size => "20x15"%>
 
       <%= f.submit "Add keyword", class: "btn btn-primary" %>
     <% end %>

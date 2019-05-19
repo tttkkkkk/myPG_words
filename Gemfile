@@ -19,6 +19,10 @@ gem 'ransack'
 gem 'redcarpet'
 gem 'coderay'
 
+# /Gemfile
+group :development, :test do
+  gem 'pry'
+end
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', groups: %w(test development), require: false
 gem 'pg', groups: %w(production), require: false
