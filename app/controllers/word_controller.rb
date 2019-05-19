@@ -1,6 +1,6 @@
 class WordController < ApplicationController
-  require "thor"
-  require "pry"
+  # require "thor"
+  # require "pry"
 
   def home
     puts '** home ***'
