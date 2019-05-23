@@ -93,7 +93,8 @@ class WordController < ApplicationController
      # @tmp5 =  html.scan(%r{<h3 class="LC20lb">(.+?)</h3>})
      #
      charset = nil
-     html = open("https://www.google.com/search?q=#{@word.key}") do |f|
+     url = URI.encode "https://www.google.com/search?q=#{@word.key}"
+     html = open(url) do |f|
         charset = f.charset
         f.read
      end
