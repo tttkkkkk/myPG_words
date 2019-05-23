@@ -10,21 +10,21 @@
       <h3>Please check word if you know ..</h3>
       <table class="table table-striped">
         <thead>
-          <th  class="col-xs-1" scope="col"></th>
           <th  class="col-xs-3" scope="col">KeyWord</th>
           <th  class="col-xs-1" scope="col">OK</th>
           <th  class="col-xs-1" scope="col">NG</th>
           <th  class="col-xs-1" scope="col">check</th>
+          <th  class="col-xs-1" scope="col">Delete</th>
         </thead>
         <tbody>
         <% if !@words.nil? %>
         <% @words.each do |f| %>
         <tr>
-          <td><%= link_to 'x', word_path(f), method: :delete, class: 'command' %></td>
-          <td><%= f.key %></td>
-          <td><%= link_to '+', upd_add_word_path(f), method: :put, class: 'btn btn-primary', data:{disable_with:'..'} %></td>
-          <td><%= link_to '-', upd_mns_word_path(f), method: :put, class: 'btn btn-primary', data:{disable_with:'..'} %></td>
+          <td><%= link_to f.key, word_path(f) %></td>
+          <td><%= link_to '+', upd_add_word_path(f), remote: true, method: :put, class: 'btn btn-primary', data:{disable_with:'..'} %></td>
+          <td><%= link_to '-', upd_mns_word_path(f), remote: true, method: :put, class: 'btn btn-primary', data:{disable_with:'..'} %></td>
           <td><%= 'ok' if f.zumi  %></td>
+          <td><%= link_to 'x', word_path(f), remote: true, method: :delete, class: 'command' %></td>
         </tr>
         <% end %>
         <% end %>
