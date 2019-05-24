@@ -5,6 +5,16 @@ class WordController < ApplicationController
   def home
     puts '** home ***'
     @words = Word.all
+
+    # respond_to do |format|
+    #   format.html do
+    #       #html用の処理を書く
+    #   end
+    #   format.csv do
+    #       #csv用の処理を書く
+    #   endw
+    # end
+
   end
 
   def new
@@ -93,7 +103,7 @@ class WordController < ApplicationController
      # @tmp5 =  html.scan(%r{<h3 class="LC20lb">(.+?)</h3>})
      #
      charset = nil
-     url = URI.encode "https://www.google.com/search?q=#{@word.key}"
+     url = URI.encode "https://www.google.com/search?hl=jp&gl=JP&q=#{@word.key}"
      html = open(url) do |f|
         charset = f.charset
         f.read

@@ -1,6 +1,6 @@
 
 <div class="container">
- <h3><%= @word.key %></h3>
+ <h3><%= @word.key %><%= link_to "Retry", word_path(@word) , class: 'btn btn-success', data:{disable_with:'..'} %></h3>
  <table class="table table-striped">
    <thead>
      <th  class="col-xs-2" scope="col">link</th>
