@@ -4,14 +4,14 @@
    <div class="container">
 
      <%= link_to "ADD", new_word_path , class: 'btn btn-success'%>
-     <%= link_to "CSV", root_path(format: :csv), class: "btn btn-success"  , data: {confirm: 'CSV?'}%>
+     <%= link_to "CSV", root_path(format: :csv), class: "btn btn-success" , data: {confirm: 'CSV?'} %>
      <%= link_to 'ALL DELETE', del_all_word_path(0), method: :delete, class:'pull-right btn btn-danger' , data: {confirm: 'Sure?'}%>
 
      <div class="container">
       <h3>Please check words..</h3>
       <table class="table table-striped">
         <thead>
-          <th  class="col-xs-5" scope="col">KeyWord</th>
+          <th  class="col-xs-6" scope="col">KeyWord</th>
           <th  class="col-xs-1" scope="col"></th>
           <th  class="col-xs-1" scope="col">OK</th>
           <th  class="col-xs-1" scope="col">NG</th>

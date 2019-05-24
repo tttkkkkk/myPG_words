@@ -42966,3 +42966,1346 @@ Processing by WordController#show as HTML
 Completed 200 OK in 766ms (Views: 301.9ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for ::1 at 2019-05-24 21:58:21 +0900
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (55.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 1078ms (Views: 1049.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-24 22:00:16 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (50.7ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 471ms (Views: 448.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-24 22:00:50 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (46.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 437ms (Views: 421.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-24 22:01:09 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (36.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 334ms (Views: 316.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-24 22:02:34 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (38.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 359ms (Views: 342.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-24 22:14:53 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (35.8ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 360ms (Views: 344.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/word/772" for ::1 at 2019-05-24 22:14:56 +0900
+Processing by WordController#show as HTML
+  Parameters: {"id"=>"772"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 772], ["LIMIT", 1]]
+  Rendering word/show.html.erb within layouts/application
+  Rendered word/show.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 774ms (Views: 286.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-24 22:15:07 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (23.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 360ms (Views: 345.2ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/word/0/del_all" for ::1 at 2019-05-24 22:15:39 +0900
+Processing by WordController#del_all as HTML
+  Parameters: {"authenticity_token"=>"GgDB6ouQ/YZJIkJ8zSp2MGCbeh1zJkq6pWAMWXGUxBQp9RPo8AD3GK91f3s8bHmmHa6WkcDaTwVYWKfXYVD+QA==", "id"=>"0"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 769]]
+  [1m[35m (25.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 772]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 773]]
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 774]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 775]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 776]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 777]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 778]]
+  [1m[35m (26.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 779]]
+  [1m[35m (21.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 780]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 781]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 782]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 783]]
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 784]]
+  [1m[35m (19.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 785]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 786]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 787]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 788]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 789]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 790]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 791]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 792]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 793]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 794]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 795]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 796]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 797]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 798]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 799]]
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 800]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 801]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 802]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 803]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 804]]
+  [1m[35m (26.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 805]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 806]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 807]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 808]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 810]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 811]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 812]]
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 813]]
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 814]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 815]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 816]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 817]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 818]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 819]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 820]]
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 821]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 822]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 823]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 824]]
+  [1m[35m (19.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 825]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 826]]
+  [1m[35m (19.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 827]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 828]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 829]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 830]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 831]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 832]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 833]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 834]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 835]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 836]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 837]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 838]]
+  [1m[35m (26.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 839]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 840]]
+  [1m[35m (19.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 841]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 842]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 843]]
+  [1m[35m (21.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 844]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 845]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 846]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 847]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 848]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 849]]
+  [1m[35m (19.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 850]]
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 851]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 852]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 853]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 854]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 855]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 856]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 857]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 858]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 859]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 860]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 861]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 862]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 863]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 864]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 865]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 866]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 867]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 868]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 869]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 870]]
+  [1m[35m (19.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 871]]
+  [1m[35m (20.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 872]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 873]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 874]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 875]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 876]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 877]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 878]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 879]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 880]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 881]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 882]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 883]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 884]]
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 885]]
+  [1m[35m (22.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 886]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 887]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 888]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 889]]
+  [1m[35m (19.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 890]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 891]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 892]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 893]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 894]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 895]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 896]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 897]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 898]]
+  [1m[35m (29.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 899]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 900]]
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 901]]
+  [1m[35m (26.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 902]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 903]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 904]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 905]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 906]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 907]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 908]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 909]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 910]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 911]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 912]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 913]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 914]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3049ms (ActiveRecord: 2546.1ms)
+
+
+Started GET "/" for ::1 at 2019-05-24 22:15:42 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 378ms (Views: 350.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/word/new" for ::1 at 2019-05-24 22:15:48 +0900
+Processing by WordController#new as HTML
+  Rendering word/new.html.erb within layouts/application
+  Rendered word/new.html.erb within layouts/application (441.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 811ms (Views: 793.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/word" for ::1 at 2019-05-24 22:21:29 +0900
+Processing by WordController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HFmHc3zu68KHqYcONNUbuDQA8ES0lijv34z3OPfbwEBl4dP4ZPQ1ct5qDSPCFDO8WqhgRx0FZvuyrDVsBTMyhA==", "word"=>{"key"=>"App Store（アップストア）\r\nSelenium(セレニウム）\r\nSEO対策\r\nAPI連携\r\ngit add .\r\ngit log\r\ngit push origin master\r\nheroku login\r\nheroku git:remote -a mypg\r\nリファラル採用 （縁故採用）\r\n[JS] async （エイシンク ）\r\n[JS] defer（デファー）\r\ngit commit -m \"first Commit\"\r\nFirebase（ファイヤーベース）\r\nWebpack（ウェブパック）\r\nシンタックスシュガー\r\nRansack  gem\r\ncocoon  gem\r\no2o(online to ofline)\r\nCMS\r\nOEM\r\nECサイト\r\nNFC\r\nFelica\r\nFintec\r\niBecon\r\nBluetooth Low Energy BLE\r\nPaaS（パース）Platform as a Service\r\nスマート・コントラクト\r\nSolidity\r\nEthereum（イーサリアム）上で動くスマートコントラクト開発の言語\r\nNgninx（えんじんえっくす）\r\nレガシー\r\nReact Native\r\ngit push heroku master\r\nApache Cordova（アパッチ・コルドバ）\r\nネイティブアプリ\r\nWebアプリ\r\nハイブリッドアプリ\r\nネイティブアプリ + Webアプリ = ハイブリッドアプリ\r\nC10K問題\r\nリバースプロキシサーバー\r\nリバースプロキシ\r\nnginx\r\nロードバランサー\r\nHTTPS通信\r\nSSLアクセラレーション\r\nWAF\r\nVue.js\r\n仮想DOM\r\nOGP\r\nプリレンダリング\r\nSSR （サーバーサイドレンダリング）\r\nDocker\r\nVirtualBox\r\nNAT\r\nポートフォワーディング\r\nプルリクエスト（Pull Request）\r\nSolidus\r\nImagemagick\r\nモール型サイト\r\n自社ECサイト\r\nクロスプラットフォーム\r\nFreeBSD\r\nGraphQL (グラフキューエル)\r\nReact  Redux（リダックス）\r\n静的サイト\r\n動的サイト\r\nStripe（ストライプ）\r\nNetlify（ネットリファイ）\r\nMarkdown形式（拡張子 .md）\r\nマークアップ言語\r\nLaravel（ララベル） PHPフレームワーク\r\nPDCA\r\nLP （ランぺ）（ランディングページ）\r\nGoogle play\r\nobjectiv-c\r\nswift（スイフト）\r\nscala（スカラ）\r\nJavaScriptヒアドキュメント\r\nkotlin（コトリン）\r\nDevOps\r\nDevRel\r\nエバンジェリスト\r\nI型人材\r\nT型人材\r\nN型人材\r\nkubernetes （クバネティス）\r\nDMCA申請\r\nハッカソン （ハック マラソン）\r\ntl;dr  要約\r\nkwsk  詳しく\r\n(ry  略\r\nRHEL （レル）\r\nカーネル\r\nLinux ディストリビューション\r\nbash\r\nHyper-v　（ハイパーバイザー）\r\n常駐プログラム\r\nREST\r\nWebSocket\r\nhttps://www.google.co.jp/search?hl=jp&gl=JP&q=test\r\nhl インターフェースの言語 言語コード（ja, en など） \r\nlr 検索対象の言語 lang_言語コード（lang_ja, lang_en など） \r\ngl 国を指定するパラメータ（JP など） \r\n[JS] __proto__プロパティ\r\n[JS] abort\r\n[JS] accelerationlncludingGravity\r\n[JS] accelerationlncludingGravity\r\n[JS] Access-Control-Allow-Headers\r\n[JS] Access-Control-Allow-Methods\r\n[JS] Access-Control-Allow-Orign\r\n[JS] Access-Control-Request-Headers\r\n[JS] Access-Control-Request-Method\r\n[JS] accuracy\r\n[JS] add\r\n[JS] addEventListener\r\n[JS] Ajax\r\n[JS] alert\r\n[JS] alpha\r\n[JS] altitudeAccuracy\r\n[JS] altitude\r\n[JS] appendChild\r\n[JS] application/javascript(MIME)\r\n[JS] application/x-WWW-form-urlencoded(MIME)\r\n[JS] applicationCache\r\n[JS] arc\r\n[JS] arcTo\r\n[JS] arguments\r\n[JS] ArrayBuffer\r\n[JS] Arrayオブジェクト\r\n[JS] Arrayコンストラクタ\r\n[JS] assert\r\n[JS] assign\r\n[JS] Attr\r\n[JS] audio要素\r\n[JS] autoplayプロパティ\r\n[JS] back\r\n[JS] beginPath\r\n[JS] beta\r\n[JS] bezierCurveTo\r\n[JS] Binary Large OBject\r\n[JS] bind\r\n[JS] Blob\r\n[JS] Blob URL\r\n[JS] Blob URL\r\n[JS] Blobオブジェクト\r\n[JS] blurイベント\r\n[JS] Booleanオブジェクト\r\n[JS] break文\r\n[JS] bufferedAmountプロパティ\r\n[JS] byteLengthプロパティ\r\n[JS] BYTES_PER_ELEMENTプロパティ\r\n[JS] cachedイベント\r\n[JS] call\r\n[JS] cancelAnimationFrame\r\n[JS] Canvas\r\n[JS] CanvasRenderingContext2D\r\n[JS] canvas\r\n[JS] caseラベル\r\n[JS] catchブロック\r\n[JS] ceil\r\n[JS] changeイベント\r\n[JS] charAt\r\n[JS] checking\r\n[JS] children\r\n[JS] class\r\n[JS] clear\r\n[JS] clearInterval\r\n[JS] clearRect\r\n[JS] clearTimeout\r\n[JS] clearWatch\r\n[JS] click\r\n[JS] clip\r\n[JS] close\r\n[JS] closePath\r\n[JS] close\r\n[JS] cmp\r\n[JS] code\r\n[JS] concat\r\n[JS] confirm\r\n[JS] connectEnd\r\n[JS] connectStart\r\n[JS] Console\r\n[JS] console\r\n[JS] constructor\r\n[JS] contextMenu\r\n[JS] Context\r\n[JS] continue\r\n[JS] controls\r\n[JS] Cookie\r\n[JS] Coordinates\r\n[JS] coords\r\n[JS] CORS\r\n[JS] createAttibute\r\n[JS] createElement\r\n[JS] createImageData\r\n[JS] createObjectStore\r\n[JS] createObjectURL\r\n[JS] Cross-Origin Resource Sharing\r\n[JS] currentTime\r\n[JS] DataURL\r\n[JS] DataView\r\n[JS] data\r\n[JS] Dateオブジェクト\r\n[JS] dbclick\r\n[JS] debug\r\n[JS] decodeURI\r\n[JS] decodeURIComponent\r\n[JS] Dedicated Worker\r\n[JS] defaultラベル\r\n[JS] deleteDatabase\r\n[JS] deleteObjectStore\r\n[JS] delete演算子\r\n[JS] descriptionプロパティ\r\n[JS] DeviceAccelerationオブジェクト\r\n[JS] devicelightイベント\r\n[JS] DeviceMotionEventオブジェクト\r\n[JS] devicemotionイベント\r\n[JS] deviceorientationイベント\r\n[JS] dir\r\n[JS] dirxml\r\n[JS] dispatchEvent\r\n[JS] display\r\n[JS] do/while\r\n[JS] Document Object Model\r\n[JS] Documentオブジェクト\r\n[JS] documentプロパティ\r\n[JS] DOM\r\n[JS] domainLookupEnd\r\n[JS] domainLookupStart\r\n[JS] domComplete\r\n[JS] domContentLoadedEbentEnd\r\n[JS] domContentLoadedEventStart\r\n[JS] DOMContent\r\n[JS] domInteractive\r\n[JS] domLoading\r\n[JS] dragendイベント\r\n[JS] dragenterイベント\r\n[JS] dragleaveイベント\r\n[JS] dragoverイベント\r\n[JS] dragstartイベント\r\n[JS] dragイベント\r\n[JS] drawImage\r\n[JS] dropイベント\r\n[JS] duration\r\n[JS] ECMA International\r\n[JS] ECMAScript\r\n"}, "commit"=>"Add keyword"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "App Store（アップストア）"], ["created_at", "2019-05-24 13:21:29.641624"], ["updated_at", "2019-05-24 13:21:29.641624"]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Selenium(セレニウム）"], ["created_at", "2019-05-24 13:21:29.659900"], ["updated_at", "2019-05-24 13:21:29.659900"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "SEO対策"], ["created_at", "2019-05-24 13:21:29.675863"], ["updated_at", "2019-05-24 13:21:29.675863"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "API連携"], ["created_at", "2019-05-24 13:21:29.689876"], ["updated_at", "2019-05-24 13:21:29.689876"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "git add ."], ["created_at", "2019-05-24 13:21:29.705885"], ["updated_at", "2019-05-24 13:21:29.705885"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "git log"], ["created_at", "2019-05-24 13:21:29.727900"], ["updated_at", "2019-05-24 13:21:29.727900"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "git push origin master"], ["created_at", "2019-05-24 13:21:29.741910"], ["updated_at", "2019-05-24 13:21:29.741910"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "heroku login"], ["created_at", "2019-05-24 13:21:29.763925"], ["updated_at", "2019-05-24 13:21:29.763925"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "heroku git:remote -a mypg"], ["created_at", "2019-05-24 13:21:29.778936"], ["updated_at", "2019-05-24 13:21:29.778936"]]
+  [1m[35m (36.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "リファラル採用 （縁故採用）"], ["created_at", "2019-05-24 13:21:29.819966"], ["updated_at", "2019-05-24 13:21:29.819966"]]
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] async （エイシンク ）"], ["created_at", "2019-05-24 13:21:29.839979"], ["updated_at", "2019-05-24 13:21:29.839979"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] defer（デファー）"], ["created_at", "2019-05-24 13:21:29.862997"], ["updated_at", "2019-05-24 13:21:29.862997"]]
+  [1m[35m (31.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "git commit -m \"first Commit\""], ["created_at", "2019-05-24 13:21:29.899022"], ["updated_at", "2019-05-24 13:21:29.899022"]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Firebase（ファイヤーベース）"], ["created_at", "2019-05-24 13:21:29.920037"], ["updated_at", "2019-05-24 13:21:29.920037"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Webpack（ウェブパック）"], ["created_at", "2019-05-24 13:21:29.942051"], ["updated_at", "2019-05-24 13:21:29.942051"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "シンタックスシュガー"], ["created_at", "2019-05-24 13:21:29.956062"], ["updated_at", "2019-05-24 13:21:29.956062"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Ransack  gem"], ["created_at", "2019-05-24 13:21:29.972072"], ["updated_at", "2019-05-24 13:21:29.972072"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "cocoon  gem"], ["created_at", "2019-05-24 13:21:29.987084"], ["updated_at", "2019-05-24 13:21:29.987084"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "o2o(online to ofline)"], ["created_at", "2019-05-24 13:21:30.009099"], ["updated_at", "2019-05-24 13:21:30.009099"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "CMS"], ["created_at", "2019-05-24 13:21:30.025111"], ["updated_at", "2019-05-24 13:21:30.025111"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "OEM"], ["created_at", "2019-05-24 13:21:30.040121"], ["updated_at", "2019-05-24 13:21:30.040121"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "ECサイト"], ["created_at", "2019-05-24 13:21:30.055132"], ["updated_at", "2019-05-24 13:21:30.055132"]]
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "NFC"], ["created_at", "2019-05-24 13:21:30.084153"], ["updated_at", "2019-05-24 13:21:30.084153"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Felica"], ["created_at", "2019-05-24 13:21:30.106168"], ["updated_at", "2019-05-24 13:21:30.106168"]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Fintec"], ["created_at", "2019-05-24 13:21:30.134188"], ["updated_at", "2019-05-24 13:21:30.134188"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "iBecon"], ["created_at", "2019-05-24 13:21:30.149198"], ["updated_at", "2019-05-24 13:21:30.149198"]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Bluetooth Low Energy BLE"], ["created_at", "2019-05-24 13:21:30.170214"], ["updated_at", "2019-05-24 13:21:30.170214"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "PaaS（パース）Platform as a Service"], ["created_at", "2019-05-24 13:21:30.186225"], ["updated_at", "2019-05-24 13:21:30.186225"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "スマート・コントラクト"], ["created_at", "2019-05-24 13:21:30.208241"], ["updated_at", "2019-05-24 13:21:30.208241"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Solidity"], ["created_at", "2019-05-24 13:21:30.222250"], ["updated_at", "2019-05-24 13:21:30.222250"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Ethereum（イーサリアム）上で動くスマートコントラクト開発の言語"], ["created_at", "2019-05-24 13:21:30.244266"], ["updated_at", "2019-05-24 13:21:30.244266"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Ngninx（えんじんえっくす）"], ["created_at", "2019-05-24 13:21:30.266282"], ["updated_at", "2019-05-24 13:21:30.266282"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "レガシー"], ["created_at", "2019-05-24 13:21:30.288296"], ["updated_at", "2019-05-24 13:21:30.288296"]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "React Native"], ["created_at", "2019-05-24 13:21:30.308311"], ["updated_at", "2019-05-24 13:21:30.308311"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "git push heroku master"], ["created_at", "2019-05-24 13:21:30.330327"], ["updated_at", "2019-05-24 13:21:30.330327"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Apache Cordova（アパッチ・コルドバ）"], ["created_at", "2019-05-24 13:21:30.346338"], ["updated_at", "2019-05-24 13:21:30.346338"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "ネイティブアプリ"], ["created_at", "2019-05-24 13:21:30.367354"], ["updated_at", "2019-05-24 13:21:30.367354"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Webアプリ"], ["created_at", "2019-05-24 13:21:30.383364"], ["updated_at", "2019-05-24 13:21:30.383364"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "ハイブリッドアプリ"], ["created_at", "2019-05-24 13:21:30.399376"], ["updated_at", "2019-05-24 13:21:30.399376"]]
+  [1m[35m (22.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "ネイティブアプリ + Webアプリ = ハイブリッドアプリ"], ["created_at", "2019-05-24 13:21:30.426395"], ["updated_at", "2019-05-24 13:21:30.426395"]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "C10K問題"], ["created_at", "2019-05-24 13:21:30.447409"], ["updated_at", "2019-05-24 13:21:30.447409"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "リバースプロキシサーバー"], ["created_at", "2019-05-24 13:21:30.463421"], ["updated_at", "2019-05-24 13:21:30.463421"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "リバースプロキシ"], ["created_at", "2019-05-24 13:21:30.478433"], ["updated_at", "2019-05-24 13:21:30.478433"]]
+  [1m[35m (20.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "nginx"], ["created_at", "2019-05-24 13:21:30.502449"], ["updated_at", "2019-05-24 13:21:30.502449"]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "ロードバランサー"], ["created_at", "2019-05-24 13:21:30.530468"], ["updated_at", "2019-05-24 13:21:30.530468"]]
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "HTTPS通信"], ["created_at", "2019-05-24 13:21:30.558488"], ["updated_at", "2019-05-24 13:21:30.558488"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "SSLアクセラレーション"], ["created_at", "2019-05-24 13:21:30.574501"], ["updated_at", "2019-05-24 13:21:30.574501"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "WAF"], ["created_at", "2019-05-24 13:21:30.591512"], ["updated_at", "2019-05-24 13:21:30.591512"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Vue.js"], ["created_at", "2019-05-24 13:21:30.608524"], ["updated_at", "2019-05-24 13:21:30.608524"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "仮想DOM"], ["created_at", "2019-05-24 13:21:30.623534"], ["updated_at", "2019-05-24 13:21:30.623534"]]
+  [1m[35m (19.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "OGP"], ["created_at", "2019-05-24 13:21:30.645550"], ["updated_at", "2019-05-24 13:21:30.645550"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "プリレンダリング"], ["created_at", "2019-05-24 13:21:30.668567"], ["updated_at", "2019-05-24 13:21:30.668567"]]
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "SSR （サーバーサイドレンダリング）"], ["created_at", "2019-05-24 13:21:30.695585"], ["updated_at", "2019-05-24 13:21:30.695585"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Docker"], ["created_at", "2019-05-24 13:21:30.717601"], ["updated_at", "2019-05-24 13:21:30.717601"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "VirtualBox"], ["created_at", "2019-05-24 13:21:30.735615"], ["updated_at", "2019-05-24 13:21:30.735615"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "NAT"], ["created_at", "2019-05-24 13:21:30.756628"], ["updated_at", "2019-05-24 13:21:30.756628"]]
+  [1m[35m (30.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "ポートフォワーディング"], ["created_at", "2019-05-24 13:21:30.791653"], ["updated_at", "2019-05-24 13:21:30.791653"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "プルリクエスト（Pull Request）"], ["created_at", "2019-05-24 13:21:30.813669"], ["updated_at", "2019-05-24 13:21:30.813669"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Solidus"], ["created_at", "2019-05-24 13:21:30.835684"], ["updated_at", "2019-05-24 13:21:30.835684"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Imagemagick"], ["created_at", "2019-05-24 13:21:30.855700"], ["updated_at", "2019-05-24 13:21:30.855700"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "モール型サイト"], ["created_at", "2019-05-24 13:21:30.877716"], ["updated_at", "2019-05-24 13:21:30.877716"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "自社ECサイト"], ["created_at", "2019-05-24 13:21:30.892725"], ["updated_at", "2019-05-24 13:21:30.892725"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "クロスプラットフォーム"], ["created_at", "2019-05-24 13:21:30.908737"], ["updated_at", "2019-05-24 13:21:30.908737"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "FreeBSD"], ["created_at", "2019-05-24 13:21:30.931753"], ["updated_at", "2019-05-24 13:21:30.931753"]]
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "GraphQL (グラフキューエル)"], ["created_at", "2019-05-24 13:21:30.961775"], ["updated_at", "2019-05-24 13:21:30.961775"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "React  Redux（リダックス）"], ["created_at", "2019-05-24 13:21:30.982789"], ["updated_at", "2019-05-24 13:21:30.982789"]]
+  [1m[35m (34.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "静的サイト"], ["created_at", "2019-05-24 13:21:31.021816"], ["updated_at", "2019-05-24 13:21:31.021816"]]
+  [1m[35m (38.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "動的サイト"], ["created_at", "2019-05-24 13:21:31.064847"], ["updated_at", "2019-05-24 13:21:31.064847"]]
+  [1m[35m (32.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Stripe（ストライプ）"], ["created_at", "2019-05-24 13:21:31.100873"], ["updated_at", "2019-05-24 13:21:31.100873"]]
+  [1m[35m (37.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Netlify（ネットリファイ）"], ["created_at", "2019-05-24 13:21:31.142903"], ["updated_at", "2019-05-24 13:21:31.142903"]]
+  [1m[35m (40.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Markdown形式（拡張子 .md）"], ["created_at", "2019-05-24 13:21:31.187934"], ["updated_at", "2019-05-24 13:21:31.187934"]]
+  [1m[35m (38.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "マークアップ言語"], ["created_at", "2019-05-24 13:21:31.229964"], ["updated_at", "2019-05-24 13:21:31.229964"]]
+  [1m[35m (53.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Laravel（ララベル） PHPフレームワーク"], ["created_at", "2019-05-24 13:21:31.288005"], ["updated_at", "2019-05-24 13:21:31.288005"]]
+  [1m[35m (35.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "PDCA"], ["created_at", "2019-05-24 13:21:31.328033"], ["updated_at", "2019-05-24 13:21:31.328033"]]
+  [1m[35m (30.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "LP （ランぺ）（ランディングページ）"], ["created_at", "2019-05-24 13:21:31.363057"], ["updated_at", "2019-05-24 13:21:31.363057"]]
+  [1m[35m (31.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Google play"], ["created_at", "2019-05-24 13:21:31.398084"], ["updated_at", "2019-05-24 13:21:31.398084"]]
+  [1m[35m (47.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "objectiv-c"], ["created_at", "2019-05-24 13:21:31.451120"], ["updated_at", "2019-05-24 13:21:31.451120"]]
+  [1m[35m (33.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "swift（スイフト）"], ["created_at", "2019-05-24 13:21:31.489147"], ["updated_at", "2019-05-24 13:21:31.489147"]]
+  [1m[35m (31.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "scala（スカラ）"], ["created_at", "2019-05-24 13:21:31.525172"], ["updated_at", "2019-05-24 13:21:31.525172"]]
+  [1m[35m (36.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "JavaScriptヒアドキュメント"], ["created_at", "2019-05-24 13:21:31.566202"], ["updated_at", "2019-05-24 13:21:31.566202"]]
+  [1m[35m (33.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "kotlin（コトリン）"], ["created_at", "2019-05-24 13:21:31.603228"], ["updated_at", "2019-05-24 13:21:31.603228"]]
+  [1m[35m (37.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "DevOps"], ["created_at", "2019-05-24 13:21:31.645258"], ["updated_at", "2019-05-24 13:21:31.645258"]]
+  [1m[35m (36.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "DevRel"], ["created_at", "2019-05-24 13:21:31.685288"], ["updated_at", "2019-05-24 13:21:31.685288"]]
+  [1m[35m (45.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "エバンジェリスト"], ["created_at", "2019-05-24 13:21:31.736322"], ["updated_at", "2019-05-24 13:21:31.736322"]]
+  [1m[35m (31.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "I型人材"], ["created_at", "2019-05-24 13:21:31.770347"], ["updated_at", "2019-05-24 13:21:31.770347"]]
+  [1m[35m (27.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "T型人材"], ["created_at", "2019-05-24 13:21:31.802370"], ["updated_at", "2019-05-24 13:21:31.802370"]]
+  [1m[35m (47.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "N型人材"], ["created_at", "2019-05-24 13:21:31.853405"], ["updated_at", "2019-05-24 13:21:31.853405"]]
+  [1m[35m (33.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "kubernetes （クバネティス）"], ["created_at", "2019-05-24 13:21:31.890431"], ["updated_at", "2019-05-24 13:21:31.890431"]]
+  [1m[35m (36.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "DMCA申請"], ["created_at", "2019-05-24 13:21:31.931460"], ["updated_at", "2019-05-24 13:21:31.931460"]]
+  [1m[35m (40.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "ハッカソン （ハック マラソン）"], ["created_at", "2019-05-24 13:21:31.975492"], ["updated_at", "2019-05-24 13:21:31.975492"]]
+  [1m[35m (42.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "tl;dr  要約"], ["created_at", "2019-05-24 13:21:32.022525"], ["updated_at", "2019-05-24 13:21:32.022525"]]
+  [1m[35m (32.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "kwsk  詳しく"], ["created_at", "2019-05-24 13:21:32.059551"], ["updated_at", "2019-05-24 13:21:32.059551"]]
+  [1m[35m (50.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "(ry  略"], ["created_at", "2019-05-24 13:21:32.113594"], ["updated_at", "2019-05-24 13:21:32.113594"]]
+  [1m[35m (46.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "RHEL （レル）"], ["created_at", "2019-05-24 13:21:32.163625"], ["updated_at", "2019-05-24 13:21:32.163625"]]
+  [1m[35m (32.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "カーネル"], ["created_at", "2019-05-24 13:21:32.199651"], ["updated_at", "2019-05-24 13:21:32.199651"]]
+  [1m[35m (40.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Linux ディストリビューション"], ["created_at", "2019-05-24 13:21:32.245683"], ["updated_at", "2019-05-24 13:21:32.245683"]]
+  [1m[35m (37.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "bash"], ["created_at", "2019-05-24 13:21:32.286714"], ["updated_at", "2019-05-24 13:21:32.286714"]]
+  [1m[35m (31.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "Hyper-v　（ハイパーバイザー）"], ["created_at", "2019-05-24 13:21:32.320737"], ["updated_at", "2019-05-24 13:21:32.320737"]]
+  [1m[35m (32.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "常駐プログラム"], ["created_at", "2019-05-24 13:21:32.356762"], ["updated_at", "2019-05-24 13:21:32.356762"]]
+  [1m[35m (32.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "REST"], ["created_at", "2019-05-24 13:21:32.391788"], ["updated_at", "2019-05-24 13:21:32.391788"]]
+  [1m[35m (29.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "WebSocket"], ["created_at", "2019-05-24 13:21:32.425810"], ["updated_at", "2019-05-24 13:21:32.425810"]]
+  [1m[35m (30.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "https://www.google.co.jp/search?hl=jp&gl=JP&q=test"], ["created_at", "2019-05-24 13:21:32.458834"], ["updated_at", "2019-05-24 13:21:32.458834"]]
+  [1m[35m (44.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "hl インターフェースの言語 言語コード（ja, en など） "], ["created_at", "2019-05-24 13:21:32.506868"], ["updated_at", "2019-05-24 13:21:32.506868"]]
+  [1m[35m (41.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "lr 検索対象の言語 lang_言語コード（lang_ja, lang_en など） "], ["created_at", "2019-05-24 13:21:32.551900"], ["updated_at", "2019-05-24 13:21:32.551900"]]
+  [1m[35m (30.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "gl 国を指定するパラメータ（JP など） "], ["created_at", "2019-05-24 13:21:32.586924"], ["updated_at", "2019-05-24 13:21:32.586924"]]
+  [1m[35m (36.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] __proto__プロパティ"], ["created_at", "2019-05-24 13:21:32.626954"], ["updated_at", "2019-05-24 13:21:32.626954"]]
+  [1m[35m (38.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] abort"], ["created_at", "2019-05-24 13:21:32.669983"], ["updated_at", "2019-05-24 13:21:32.669983"]]
+  [1m[35m (41.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] accelerationlncludingGravity"], ["created_at", "2019-05-24 13:21:32.716016"], ["updated_at", "2019-05-24 13:21:32.716016"]]
+  [1m[35m (36.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] accelerationlncludingGravity"], ["created_at", "2019-05-24 13:21:32.756044"], ["updated_at", "2019-05-24 13:21:32.756044"]]
+  [1m[35m (37.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Access-Control-Allow-Headers"], ["created_at", "2019-05-24 13:21:32.798074"], ["updated_at", "2019-05-24 13:21:32.798074"]]
+  [1m[35m (33.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Access-Control-Allow-Methods"], ["created_at", "2019-05-24 13:21:32.836101"], ["updated_at", "2019-05-24 13:21:32.836101"]]
+  [1m[35m (35.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Access-Control-Allow-Orign"], ["created_at", "2019-05-24 13:21:32.876129"], ["updated_at", "2019-05-24 13:21:32.876129"]]
+  [1m[35m (38.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Access-Control-Request-Headers"], ["created_at", "2019-05-24 13:21:32.918159"], ["updated_at", "2019-05-24 13:21:32.918159"]]
+  [1m[35m (32.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Access-Control-Request-Method"], ["created_at", "2019-05-24 13:21:32.954185"], ["updated_at", "2019-05-24 13:21:32.954185"]]
+  [1m[35m (32.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] accuracy"], ["created_at", "2019-05-24 13:21:32.991211"], ["updated_at", "2019-05-24 13:21:32.991211"]]
+  [1m[35m (29.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] add"], ["created_at", "2019-05-24 13:21:33.024234"], ["updated_at", "2019-05-24 13:21:33.024234"]]
+  [1m[35m (33.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] addEventListener"], ["created_at", "2019-05-24 13:21:33.062261"], ["updated_at", "2019-05-24 13:21:33.062261"]]
+  [1m[35m (38.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Ajax"], ["created_at", "2019-05-24 13:21:33.103290"], ["updated_at", "2019-05-24 13:21:33.103290"]]
+  [1m[35m (37.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] alert"], ["created_at", "2019-05-24 13:21:33.144320"], ["updated_at", "2019-05-24 13:21:33.144320"]]
+  [1m[35m (37.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] alpha"], ["created_at", "2019-05-24 13:21:33.185350"], ["updated_at", "2019-05-24 13:21:33.185350"]]
+  [1m[35m (50.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] altitudeAccuracy"], ["created_at", "2019-05-24 13:21:33.241389"], ["updated_at", "2019-05-24 13:21:33.241389"]]
+  [1m[35m (37.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] altitude"], ["created_at", "2019-05-24 13:21:33.282417"], ["updated_at", "2019-05-24 13:21:33.282417"]]
+  [1m[35m (33.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] appendChild"], ["created_at", "2019-05-24 13:21:33.319443"], ["updated_at", "2019-05-24 13:21:33.319443"]]
+  [1m[35m (45.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] application/javascript(MIME)"], ["created_at", "2019-05-24 13:21:33.369479"], ["updated_at", "2019-05-24 13:21:33.369479"]]
+  [1m[35m (36.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] application/x-WWW-form-urlencoded(MIME)"], ["created_at", "2019-05-24 13:21:33.410508"], ["updated_at", "2019-05-24 13:21:33.410508"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] applicationCache"], ["created_at", "2019-05-24 13:21:33.431522"], ["updated_at", "2019-05-24 13:21:33.431522"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] arc"], ["created_at", "2019-05-24 13:21:33.453538"], ["updated_at", "2019-05-24 13:21:33.453538"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] arcTo"], ["created_at", "2019-05-24 13:21:33.475554"], ["updated_at", "2019-05-24 13:21:33.475554"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] arguments"], ["created_at", "2019-05-24 13:21:33.497571"], ["updated_at", "2019-05-24 13:21:33.497571"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] ArrayBuffer"], ["created_at", "2019-05-24 13:21:33.520586"], ["updated_at", "2019-05-24 13:21:33.520586"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Arrayオブジェクト"], ["created_at", "2019-05-24 13:21:33.543602"], ["updated_at", "2019-05-24 13:21:33.543602"]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Arrayコンストラクタ"], ["created_at", "2019-05-24 13:21:33.564618"], ["updated_at", "2019-05-24 13:21:33.564618"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] assert"], ["created_at", "2019-05-24 13:21:33.580629"], ["updated_at", "2019-05-24 13:21:33.580629"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] assign"], ["created_at", "2019-05-24 13:21:33.593638"], ["updated_at", "2019-05-24 13:21:33.593638"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Attr"], ["created_at", "2019-05-24 13:21:33.608648"], ["updated_at", "2019-05-24 13:21:33.608648"]]
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] audio要素"], ["created_at", "2019-05-24 13:21:33.637670"], ["updated_at", "2019-05-24 13:21:33.637670"]]
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] autoplayプロパティ"], ["created_at", "2019-05-24 13:21:33.666689"], ["updated_at", "2019-05-24 13:21:33.666689"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] back"], ["created_at", "2019-05-24 13:21:33.681699"], ["updated_at", "2019-05-24 13:21:33.681699"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] beginPath"], ["created_at", "2019-05-24 13:21:33.696710"], ["updated_at", "2019-05-24 13:21:33.696710"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] beta"], ["created_at", "2019-05-24 13:21:33.712722"], ["updated_at", "2019-05-24 13:21:33.712722"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] bezierCurveTo"], ["created_at", "2019-05-24 13:21:33.740742"], ["updated_at", "2019-05-24 13:21:33.740742"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Binary Large OBject"], ["created_at", "2019-05-24 13:21:33.755752"], ["updated_at", "2019-05-24 13:21:33.755752"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] bind"], ["created_at", "2019-05-24 13:21:33.776768"], ["updated_at", "2019-05-24 13:21:33.776768"]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Blob"], ["created_at", "2019-05-24 13:21:33.804787"], ["updated_at", "2019-05-24 13:21:33.804787"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Blob URL"], ["created_at", "2019-05-24 13:21:33.826804"], ["updated_at", "2019-05-24 13:21:33.826804"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Blob URL"], ["created_at", "2019-05-24 13:21:33.841814"], ["updated_at", "2019-05-24 13:21:33.841814"]]
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Blobオブジェクト"], ["created_at", "2019-05-24 13:21:33.869833"], ["updated_at", "2019-05-24 13:21:33.869833"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] blurイベント"], ["created_at", "2019-05-24 13:21:33.884844"], ["updated_at", "2019-05-24 13:21:33.884844"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Booleanオブジェクト"], ["created_at", "2019-05-24 13:21:33.899854"], ["updated_at", "2019-05-24 13:21:33.899854"]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] break文"], ["created_at", "2019-05-24 13:21:33.927875"], ["updated_at", "2019-05-24 13:21:33.927875"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] bufferedAmountプロパティ"], ["created_at", "2019-05-24 13:21:33.949891"], ["updated_at", "2019-05-24 13:21:33.949891"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] byteLengthプロパティ"], ["created_at", "2019-05-24 13:21:33.971908"], ["updated_at", "2019-05-24 13:21:33.971908"]]
+  [1m[35m (46.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] BYTES_PER_ELEMENTプロパティ"], ["created_at", "2019-05-24 13:21:34.022943"], ["updated_at", "2019-05-24 13:21:34.022943"]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] cachedイベント"], ["created_at", "2019-05-24 13:21:34.051963"], ["updated_at", "2019-05-24 13:21:34.051963"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] call"], ["created_at", "2019-05-24 13:21:34.065972"], ["updated_at", "2019-05-24 13:21:34.065972"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] cancelAnimationFrame"], ["created_at", "2019-05-24 13:21:34.089989"], ["updated_at", "2019-05-24 13:21:34.089989"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Canvas"], ["created_at", "2019-05-24 13:21:34.106002"], ["updated_at", "2019-05-24 13:21:34.106002"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] CanvasRenderingContext2D"], ["created_at", "2019-05-24 13:21:34.128018"], ["updated_at", "2019-05-24 13:21:34.128018"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] canvas"], ["created_at", "2019-05-24 13:21:34.143028"], ["updated_at", "2019-05-24 13:21:34.143028"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] caseラベル"], ["created_at", "2019-05-24 13:21:34.165042"], ["updated_at", "2019-05-24 13:21:34.165042"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] catchブロック"], ["created_at", "2019-05-24 13:21:34.181053"], ["updated_at", "2019-05-24 13:21:34.181053"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] ceil"], ["created_at", "2019-05-24 13:21:34.197064"], ["updated_at", "2019-05-24 13:21:34.197064"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] changeイベント"], ["created_at", "2019-05-24 13:21:34.222083"], ["updated_at", "2019-05-24 13:21:34.222083"]]
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] charAt"], ["created_at", "2019-05-24 13:21:34.251104"], ["updated_at", "2019-05-24 13:21:34.251104"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] checking"], ["created_at", "2019-05-24 13:21:34.267114"], ["updated_at", "2019-05-24 13:21:34.267114"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] children"], ["created_at", "2019-05-24 13:21:34.289130"], ["updated_at", "2019-05-24 13:21:34.289130"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] class"], ["created_at", "2019-05-24 13:21:34.311145"], ["updated_at", "2019-05-24 13:21:34.311145"]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] clear"], ["created_at", "2019-05-24 13:21:34.332160"], ["updated_at", "2019-05-24 13:21:34.332160"]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] clearInterval"], ["created_at", "2019-05-24 13:21:34.353177"], ["updated_at", "2019-05-24 13:21:34.353177"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] clearRect"], ["created_at", "2019-05-24 13:21:34.368187"], ["updated_at", "2019-05-24 13:21:34.368187"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] clearTimeout"], ["created_at", "2019-05-24 13:21:34.384197"], ["updated_at", "2019-05-24 13:21:34.384197"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] clearWatch"], ["created_at", "2019-05-24 13:21:34.406213"], ["updated_at", "2019-05-24 13:21:34.406213"]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] click"], ["created_at", "2019-05-24 13:21:34.434233"], ["updated_at", "2019-05-24 13:21:34.434233"]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] clip"], ["created_at", "2019-05-24 13:21:34.463254"], ["updated_at", "2019-05-24 13:21:34.463254"]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] close"], ["created_at", "2019-05-24 13:21:34.484269"], ["updated_at", "2019-05-24 13:21:34.484269"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] closePath"], ["created_at", "2019-05-24 13:21:34.499280"], ["updated_at", "2019-05-24 13:21:34.499280"]]
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] close"], ["created_at", "2019-05-24 13:21:34.519294"], ["updated_at", "2019-05-24 13:21:34.519294"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] cmp"], ["created_at", "2019-05-24 13:21:34.541310"], ["updated_at", "2019-05-24 13:21:34.541310"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] code"], ["created_at", "2019-05-24 13:21:34.562323"], ["updated_at", "2019-05-24 13:21:34.562323"]]
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] concat"], ["created_at", "2019-05-24 13:21:34.591345"], ["updated_at", "2019-05-24 13:21:34.591345"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] confirm"], ["created_at", "2019-05-24 13:21:34.613360"], ["updated_at", "2019-05-24 13:21:34.613360"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] connectEnd"], ["created_at", "2019-05-24 13:21:34.635375"], ["updated_at", "2019-05-24 13:21:34.635375"]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] connectStart"], ["created_at", "2019-05-24 13:21:34.657391"], ["updated_at", "2019-05-24 13:21:34.657391"]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Console"], ["created_at", "2019-05-24 13:21:34.685411"], ["updated_at", "2019-05-24 13:21:34.685411"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] console"], ["created_at", "2019-05-24 13:21:34.701422"], ["updated_at", "2019-05-24 13:21:34.701422"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] constructor"], ["created_at", "2019-05-24 13:21:34.721436"], ["updated_at", "2019-05-24 13:21:34.721436"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] contextMenu"], ["created_at", "2019-05-24 13:21:34.737448"], ["updated_at", "2019-05-24 13:21:34.737448"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Context"], ["created_at", "2019-05-24 13:21:34.752458"], ["updated_at", "2019-05-24 13:21:34.752458"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] continue"], ["created_at", "2019-05-24 13:21:34.773473"], ["updated_at", "2019-05-24 13:21:34.773473"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] controls"], ["created_at", "2019-05-24 13:21:34.794487"], ["updated_at", "2019-05-24 13:21:34.794487"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Cookie"], ["created_at", "2019-05-24 13:21:34.816504"], ["updated_at", "2019-05-24 13:21:34.816504"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Coordinates"], ["created_at", "2019-05-24 13:21:34.838520"], ["updated_at", "2019-05-24 13:21:34.838520"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] coords"], ["created_at", "2019-05-24 13:21:34.860535"], ["updated_at", "2019-05-24 13:21:34.860535"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] CORS"], ["created_at", "2019-05-24 13:21:34.882550"], ["updated_at", "2019-05-24 13:21:34.882550"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] createAttibute"], ["created_at", "2019-05-24 13:21:34.905566"], ["updated_at", "2019-05-24 13:21:34.905566"]]
+  [1m[35m (45.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] createElement"], ["created_at", "2019-05-24 13:21:34.955603"], ["updated_at", "2019-05-24 13:21:34.955603"]]
+  [1m[35m (32.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] createImageData"], ["created_at", "2019-05-24 13:21:34.991628"], ["updated_at", "2019-05-24 13:21:34.991628"]]
+  [1m[35m (53.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] createObjectStore"], ["created_at", "2019-05-24 13:21:35.048668"], ["updated_at", "2019-05-24 13:21:35.048668"]]
+  [1m[35m (40.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] createObjectURL"], ["created_at", "2019-05-24 13:21:35.092700"], ["updated_at", "2019-05-24 13:21:35.092700"]]
+  [1m[35m (45.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Cross-Origin Resource Sharing"], ["created_at", "2019-05-24 13:21:35.141734"], ["updated_at", "2019-05-24 13:21:35.141734"]]
+  [1m[35m (37.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] currentTime"], ["created_at", "2019-05-24 13:21:35.184765"], ["updated_at", "2019-05-24 13:21:35.184765"]]
+  [1m[35m (44.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] DataURL"], ["created_at", "2019-05-24 13:21:35.233799"], ["updated_at", "2019-05-24 13:21:35.233799"]]
+  [1m[35m (36.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] DataView"], ["created_at", "2019-05-24 13:21:35.273828"], ["updated_at", "2019-05-24 13:21:35.273828"]]
+  [1m[35m (38.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] data"], ["created_at", "2019-05-24 13:21:35.316858"], ["updated_at", "2019-05-24 13:21:35.316858"]]
+  [1m[35m (44.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Dateオブジェクト"], ["created_at", "2019-05-24 13:21:35.364893"], ["updated_at", "2019-05-24 13:21:35.364893"]]
+  [1m[35m (31.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] dbclick"], ["created_at", "2019-05-24 13:21:35.400917"], ["updated_at", "2019-05-24 13:21:35.400917"]]
+  [1m[35m (31.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] debug"], ["created_at", "2019-05-24 13:21:35.434941"], ["updated_at", "2019-05-24 13:21:35.434941"]]
+  [1m[35m (47.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] decodeURI"], ["created_at", "2019-05-24 13:21:35.486980"], ["updated_at", "2019-05-24 13:21:35.486980"]]
+  [1m[35m (36.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] decodeURIComponent"], ["created_at", "2019-05-24 13:21:35.526006"], ["updated_at", "2019-05-24 13:21:35.526006"]]
+  [1m[35m (29.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Dedicated Worker"], ["created_at", "2019-05-24 13:21:35.560029"], ["updated_at", "2019-05-24 13:21:35.560029"]]
+  [1m[35m (32.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] defaultラベル"], ["created_at", "2019-05-24 13:21:35.597058"], ["updated_at", "2019-05-24 13:21:35.597058"]]
+  [1m[35m (30.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] deleteDatabase"], ["created_at", "2019-05-24 13:21:35.632081"], ["updated_at", "2019-05-24 13:21:35.632081"]]
+  [1m[35m (38.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] deleteObjectStore"], ["created_at", "2019-05-24 13:21:35.673110"], ["updated_at", "2019-05-24 13:21:35.673110"]]
+  [1m[35m (36.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] delete演算子"], ["created_at", "2019-05-24 13:21:35.714140"], ["updated_at", "2019-05-24 13:21:35.714140"]]
+  [1m[35m (38.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] descriptionプロパティ"], ["created_at", "2019-05-24 13:21:35.757170"], ["updated_at", "2019-05-24 13:21:35.757170"]]
+  [1m[35m (36.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] DeviceAccelerationオブジェクト"], ["created_at", "2019-05-24 13:21:35.797200"], ["updated_at", "2019-05-24 13:21:35.797200"]]
+  [1m[35m (29.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] devicelightイベント"], ["created_at", "2019-05-24 13:21:35.831222"], ["updated_at", "2019-05-24 13:21:35.831222"]]
+  [1m[35m (32.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] DeviceMotionEventオブジェクト"], ["created_at", "2019-05-24 13:21:35.866246"], ["updated_at", "2019-05-24 13:21:35.866246"]]
+  [1m[35m (37.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] devicemotionイベント"], ["created_at", "2019-05-24 13:21:35.909278"], ["updated_at", "2019-05-24 13:21:35.909278"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] deviceorientationイベント"], ["created_at", "2019-05-24 13:21:35.931293"], ["updated_at", "2019-05-24 13:21:35.931293"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] dir"], ["created_at", "2019-05-24 13:21:35.946303"], ["updated_at", "2019-05-24 13:21:35.946303"]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] dirxml"], ["created_at", "2019-05-24 13:21:35.967320"], ["updated_at", "2019-05-24 13:21:35.967320"]]
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] dispatchEvent"], ["created_at", "2019-05-24 13:21:35.994337"], ["updated_at", "2019-05-24 13:21:35.994337"]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] display"], ["created_at", "2019-05-24 13:21:36.016354"], ["updated_at", "2019-05-24 13:21:36.016354"]]
+  [1m[35m (19.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] do/while"], ["created_at", "2019-05-24 13:21:36.039371"], ["updated_at", "2019-05-24 13:21:36.039371"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Document Object Model"], ["created_at", "2019-05-24 13:21:36.062386"], ["updated_at", "2019-05-24 13:21:36.062386"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] Documentオブジェクト"], ["created_at", "2019-05-24 13:21:36.084401"], ["updated_at", "2019-05-24 13:21:36.084401"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] documentプロパティ"], ["created_at", "2019-05-24 13:21:36.099412"], ["updated_at", "2019-05-24 13:21:36.099412"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] DOM"], ["created_at", "2019-05-24 13:21:36.115423"], ["updated_at", "2019-05-24 13:21:36.115423"]]
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] domainLookupEnd"], ["created_at", "2019-05-24 13:21:36.141441"], ["updated_at", "2019-05-24 13:21:36.141441"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] domainLookupStart"], ["created_at", "2019-05-24 13:21:36.156452"], ["updated_at", "2019-05-24 13:21:36.156452"]]
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] domComplete"], ["created_at", "2019-05-24 13:21:36.186474"], ["updated_at", "2019-05-24 13:21:36.186474"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] domContentLoadedEbentEnd"], ["created_at", "2019-05-24 13:21:36.210490"], ["updated_at", "2019-05-24 13:21:36.210490"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] domContentLoadedEventStart"], ["created_at", "2019-05-24 13:21:36.224501"], ["updated_at", "2019-05-24 13:21:36.224501"]]
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] DOMContent"], ["created_at", "2019-05-24 13:21:36.252520"], ["updated_at", "2019-05-24 13:21:36.252520"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] domInteractive"], ["created_at", "2019-05-24 13:21:36.267531"], ["updated_at", "2019-05-24 13:21:36.267531"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] domLoading"], ["created_at", "2019-05-24 13:21:36.289547"], ["updated_at", "2019-05-24 13:21:36.289547"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] dragendイベント"], ["created_at", "2019-05-24 13:21:36.303556"], ["updated_at", "2019-05-24 13:21:36.303556"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] dragenterイベント"], ["created_at", "2019-05-24 13:21:36.326574"], ["updated_at", "2019-05-24 13:21:36.326574"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] dragleaveイベント"], ["created_at", "2019-05-24 13:21:36.341583"], ["updated_at", "2019-05-24 13:21:36.341583"]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] dragoverイベント"], ["created_at", "2019-05-24 13:21:36.369603"], ["updated_at", "2019-05-24 13:21:36.369603"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] dragstartイベント"], ["created_at", "2019-05-24 13:21:36.385616"], ["updated_at", "2019-05-24 13:21:36.385616"]]
+  [1m[35m (30.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] dragイベント"], ["created_at", "2019-05-24 13:21:36.419638"], ["updated_at", "2019-05-24 13:21:36.419638"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] drawImage"], ["created_at", "2019-05-24 13:21:36.435650"], ["updated_at", "2019-05-24 13:21:36.435650"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] dropイベント"], ["created_at", "2019-05-24 13:21:36.458666"], ["updated_at", "2019-05-24 13:21:36.458666"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] duration"], ["created_at", "2019-05-24 13:21:36.481683"], ["updated_at", "2019-05-24 13:21:36.481683"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] ECMA International"], ["created_at", "2019-05-24 13:21:36.496693"], ["updated_at", "2019-05-24 13:21:36.496693"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "[JS] ECMAScript"], ["created_at", "2019-05-24 13:21:36.512704"], ["updated_at", "2019-05-24 13:21:36.512704"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6889ms (ActiveRecord: 6104.5ms)
+
+
+Started GET "/" for ::1 at 2019-05-24 22:21:36 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (108.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 458ms (Views: 431.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/word/915" for ::1 at 2019-05-24 22:22:30 +0900
+Processing by WordController#show as HTML
+  Parameters: {"id"=>"915"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 915], ["LIMIT", 1]]
+  Rendering word/show.html.erb within layouts/application
+  Rendered word/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 1050ms (Views: 302.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/about" for ::1 at 2019-05-24 22:22:41 +0900
+Processing by WordController#about as HTML
+  Rendering word/about.html.erb within layouts/application
+  Rendered word/about.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 293ms (Views: 291.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-24 22:23:04 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (52.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 374ms (Views: 357.4ms | ActiveRecord: 1.0ms)
+
+
