@@ -103,8 +103,8 @@ class WordController < ApplicationController
      # @tmp5 =  html.scan(%r{<h3 class="LC20lb">(.+?)</h3>})
      #
      charset = nil
-     url = URI.encode "https://www.google.com/search?hl=jp&gl=JP&q=#{@word.key}"
-     html = open(url) do |f|
+     @url = URI.encode "https://www.google.com/search?hl=jp&gl=JP&q=#{@word.key}"
+     html = open(@url) do |f|
         charset = f.charset
         f.read
      end
@@ -115,6 +115,7 @@ class WordController < ApplicationController
      # end
 
      doc.xpath('//h3[@class="r"]').each do |f|
+       # puts f
        @tmp1.push(f.text)
        url = CGI.unescape(CGI.unescapeHTML(f.xpath('a/@href').text))
        if !url.empty? then

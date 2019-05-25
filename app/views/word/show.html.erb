@@ -1,7 +1,8 @@
 
 <div class="container">
  <h3><%= @word.key %></h3>
- <%= link_to "Retry", word_path(@word) , class: 'pull-right btn btn-success', data:{disable_with:'..'} %>
+ <%= link_to "Retry", word_path(@word) , class: 'pull-center btn btn-success', data:{disable_with:'..'} %>
+ <%= link_to "Google", @url , class: 'pull-right btn btn-success' %>
  <table class="table table-striped">
    <thead>
      <th  class="col-xs-2" scope="col">link</th>
