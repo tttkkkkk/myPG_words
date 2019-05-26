@@ -15,3 +15,19 @@
 //= require_tree .
 //= require jquery
 //= require bootstrap
+$(function(){
+  var btn = $("#btnDown");
+  var body = $("body");
+
+  btn.click(function(){
+    var menu = $(this).attr("href");
+    var scroll_point = $(menu).offset().top;
+
+    console.log(menu); //#end
+    console.log(scroll_point); //12594
+
+    body.animate({
+      scrollTop: scroll_point
+    }, 900);
+  });
+});

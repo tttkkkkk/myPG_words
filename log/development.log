@@ -44714,3 +44714,328 @@ Processing by WordController#show as HTML
 Completed 200 OK in 902ms (Views: 311.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-05-26 21:16:44 +0900
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (236.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1744ms (Views: 1660.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/word/916" for ::1 at 2019-05-26 21:16:51 +0900
+Processing by WordController#show as HTML
+  Parameters: {"id"=>"916"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 916], ["LIMIT", 1]]
+  Rendering word/show.html.erb within layouts/application
+  Rendered word/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1200ms (Views: 442.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:20:52 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (4.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (80.0ms)
+  Rendered layouts/_shim.html.erb (4.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (4.0ms)
+Completed 200 OK in 440ms (Views: 417.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:23:17 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (4.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (220.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 768ms (Views: 711.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:24:32 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (4.0ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  Rendered word/home.html.erb within layouts/application (92.0ms)
+  Rendered layouts/_shim.html.erb (4.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 536ms (Views: 473.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:27:27 +0900
+Processing by WordController#home as HTML
+Completed 500 Internal Server Error in 16ms
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/word_controller.rb:8:in `home'
+Started GET "/" for ::1 at 2019-05-26 21:28:16 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (4.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."create_dt" DESC[0m
+  Rendered word/home.html.erb within layouts/application (72.0ms)
+Completed 500 Internal Server Error in 316ms (ActiveRecord: 12.0ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: words.create_dt: SELECT "words".* FROM "words" ORDER BY "words"."create_dt" DESC):
+    19:         </thead>
+    20:         <tbody>
+    21:         <% if !@words.nil? %>
+    22:         <% @words.each do |f| %>
+    23:         <tr>
+    24:           <td><%= link_to f.key, (URI.encode "https://www.google.com/search?hl=jp&gl=JP&q=#{f.key}"), target: :_blank  %></td>
+    25:           <td><%= 'ok' if f.zumi  %></td>
+  
+app/views/word/home.html.erb:22:in `_app_views_word_home_html_erb__695556388_99662880'
+Started GET "/" for ::1 at 2019-05-26 21:28:54 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (4.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (156.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 660ms (Views: 616.3ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/word/new" for ::1 at 2019-05-26 21:29:00 +0900
+Processing by WordController#new as HTML
+  Rendering word/new.html.erb within layouts/application
+  Rendered word/new.html.erb within layouts/application (505.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (4.0ms)
+Completed 200 OK in 849ms (Views: 834.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/word" for ::1 at 2019-05-26 21:29:03 +0900
+Processing by WordController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BRwSkiVuxyw3oztyu760v4QRZ2BQg9m0EPjXOI/ZoAKMg7F83J//9yUJTNGfgsbuJiC3icW8l9ZcqHakRegU1Q==", "word"=>{"key"=>"a"}, "commit"=>"Add keyword"}
+  [1m[35m (4.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "words" ("key", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["key", "a"], ["created_at", "2019-05-26 12:29:03.997062"], ["updated_at", "2019-05-26 12:29:03.997062"]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 40ms (ActiveRecord: 28.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:29:04 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (4.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (200.0ms)
+  Rendered layouts/_shim.html.erb (4.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (4.0ms)
+Completed 200 OK in 548ms (Views: 518.1ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/word/1163" for ::1 at 2019-05-26 21:29:07 +0900
+Processing by WordController#destroy as JS
+  Parameters: {"id"=>"1163"}
+  [1m[36mWord Load (4.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1163], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[31mDELETE FROM "words" WHERE "words"."id" = ?[0m  [["id", 1163]]
+  [1m[35m (20.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 32ms (ActiveRecord: 28.1ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:29:07 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (92.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 436ms (Views: 416.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:30:12 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (68.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 408ms (Views: 372.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:46:53 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (72.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 1006ms (Views: 985.6ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:47:21 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (3.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (93.2ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 460ms (Views: 443.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:48:15 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (84.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 420ms (Views: 405.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:48:56 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (59.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 364ms (Views: 347.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:49:48 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (62.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 381ms (Views: 365.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:50:22 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (61.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 390ms (Views: 373.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:50:46 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (71.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 396ms (Views: 381.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:51:30 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (60.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 347ms (Views: 330.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:52:16 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (59.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 365ms (Views: 349.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:54:23 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (70.8ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 545ms (Views: 528.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:54:57 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (63.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 530ms (Views: 512.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:55:17 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (61.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 372ms (Views: 356.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:57:40 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (70.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 515ms (Views: 499.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 21:58:41 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (61.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (4.0ms)
+Completed 200 OK in 533ms (Views: 508.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-26 22:00:13 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (62.1ms)
+  Rendered layouts/_shim.html.erb (4.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 397ms (Views: 381.6ms | ActiveRecord: 1.0ms)
+
+

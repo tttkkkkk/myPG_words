@@ -4,7 +4,8 @@ class WordController < ApplicationController
 
   def home
     puts '** home ***'
-    @words = Word.all
+    # @words = Word.all
+    @words = Word.all.order(created_at: "DESC")
 
     # respond_to do |format|
     #   format.html do
