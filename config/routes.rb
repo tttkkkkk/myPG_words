@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'word#home'
   resources :word do
     member do
+      put 'study'
       put 'upd_add'
       put 'upd_mns'
       delete 'del_all'

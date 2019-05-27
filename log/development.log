@@ -45039,3 +45039,1559 @@ Processing by WordController#home as HTML
 Completed 200 OK in 397ms (Views: 381.6ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for ::1 at 2019-05-27 21:09:30 +0900
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (131.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 2297ms (Views: 2254.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:11:09 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  Rendered word/home.html.erb within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"study", :controller=>"word"}, missing required keys: [:id]):
+    1:      <%= link_to "ADD", new_word_path , class: 'btn btn-success'%>
+    2:      <%= link_to "CSV", root_path(format: :csv), class: "btn btn-success" , data: {confirm: 'CSV?'} %>
+    3:      <%= link_to 'Study!', study_word_path, method: :put, class: 'btn btn-primary' %>
+    4: 
+    5:      <%= link_to 'ALL DELETE', del_all_word_path(0), method: :delete, class:'pull-right btn btn-danger' , data: {confirm: 'Sure?'}%>
+    6: 
+  
+app/views/word/home.html.erb:3:in `_app_views_word_home_html_erb__246719880_98652100'
+Started GET "/" for ::1 at 2019-05-27 21:11:42 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (62.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 379ms (Views: 357.3ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:11:45 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"rcK0FOB6+c5BUy/KCT4FAh5UYaPOanh1gehfiW0h/XHsO0PfG2uRrcBKDuJ8ty8ar33ajoTY1uKnhzgFpxc5CQ==", "id"=>"0"}
+  [1m[36mWord Load (9.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 319ms (Views: 276.2ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/word/0/study" for ::1 at 2019-05-27 21:11:52 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/word/0/study"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/word/0/study" for ::1 at 2019-05-27 21:12:07 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/word/0/study"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:12:28 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"rcK0FOB6+c5BUy/KCT4FAh5UYaPOanh1gehfiW0h/XHsO0PfG2uRrcBKDuJ8ty8ar33ajoTY1uKnhzgFpxc5CQ==", "id"=>"0"}
+  [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 431ms (Views: 405.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/word/0/study" for ::1 at 2019-05-27 21:12:45 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/word/0/study"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-05-27 21:14:11 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (59.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 391ms (Views: 375.2ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:14:13 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"fb5EcQGHClHrhMAGPUxDG8W8Cq7W+5eCRM9rZPDr4as8R7O6+pZiMmqd4S5IxWkDdJWxg5xJORVioAzoOt0l0w==", "id"=>"0"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 382ms (Views: 358.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:14:57 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (65.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 407ms (Views: 387.8ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:14:59 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"dXtE3fBud7Z3w70/a2Chsik8ajCe29pPa7gcSZ7GXXI0grMWC38f1fbanBce6YuqmBXRHdRpdNhN13vFVPCZCg==", "id"=>"0"}
+  [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 367ms (Views: 341.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:15:44 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (67.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 385ms (Views: 365.6ms | ActiveRecord: 3.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:15:46 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"V20TnsR3ONhrc1Utya46WlXZYJuEFhpK6LMOCwykdBEWlORVP2ZQu+pqdAW8JxBC5PDbts6ktN3O3GmHxpKwaQ==", "id"=>"0"}
+  [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (6.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 372ms (Views: 345.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:16:37 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (72.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 395ms (Views: 371.9ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:16:39 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"huOPQk+JZNgiB3ORhMfdZVA11iLby9AJNB+h7z8oz8THGniJtJgMu6MeUrnxTvd94RxtD5F5fp4ScMZj9R4LvA==", "id"=>"0"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 366ms (Views: 326.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:21:16 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (83.0ms)
+  Rendered layouts/_shim.html.erb (9.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 523ms (Views: 503.3ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:21:18 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"3aLfq/rCSNVwzXW0e8aggtaI1LL1j4zoP7RJM5p1dnacWyhgAdMgtvHUVJwOT4qaZ6Fvn789In8Z2y6/UEOyDg==", "id"=>"0"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words"."key" FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 419ms (Views: 385.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:22:19 +0900
+  
+SyntaxError (C:/Users/USER/myPG_Words/app/controllers/word_controller.rb:40: syntax error, unexpected '(', expecting keyword_end
+    @keys = @words(:key)
+                   ^):
+  
+app/controllers/word_controller.rb:40: syntax error, unexpected '(', expecting keyword_end
+Started GET "/" for ::1 at 2019-05-27 21:22:35 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (123.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 705ms (Views: 669.2ms | ActiveRecord: 8.2ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:22:38 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"TWaR4Bv1y9kVFir5QI8qc1n8PIdCHC4glgZGsQ4jYlMMn2Yr4OSjupQPC9E1BgBr6NWHqgiugLewaSE9xBWmKw==", "id"=>"0"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/word_controller.rb:40:in `study'
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:22:55 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"TWaR4Bv1y9kVFir5QI8qc1n8PIdCHC4glgZGsQ4jYlMMn2Yr4OSjupQPC9E1BgBr6NWHqgiugLewaSE9xBWmKw==", "id"=>"0"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words"."key" FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (10.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 399ms (Views: 355.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:23:37 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (79.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 429ms (Views: 405.9ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:23:39 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"xRbOpJcN24QlglP5dOA2ZNEvb1LmpxpjavhkyUMgzeWE7zlvbByz56SbctEBaRx8YAbUf6wVtPRMlwNFiRYJnQ==", "id"=>"0"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT  "words"."key" FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 409ms (Views: 381.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:25:48 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (74.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 436ms (Views: 416.4ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:25:53 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"/ToQuTY0RoXgUaet0jxHPrLWZfjm468fclDnsqsdNKO8w+dyzSUu5mFIhoWntW0mA//e1axRAYhUP4A+YSvw2w==", "id"=>"0"}
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT  "words"."key" FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 403ms (Views: 373.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/word/0/study" for ::1 at 2019-05-27 21:26:16 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/word/0/study"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-05-27 21:26:19 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (98.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 538ms (Views: 476.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:26:22 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (65.0ms)
+  Rendered layouts/_shim.html.erb (2.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 429ms (Views: 411.7ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:26:25 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"WBmG+VVBbyh2qCYWM2dI26I05NUl3gSsZ7WX+B/I5/gZ4HEyrlAHS/exBz5G7mLDEx1f+G9sqjtB2vB01f4jgA==", "id"=>"0"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT  "words"."key" FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (3.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 463ms (Views: 433.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/word/0/study" for ::1 at 2019-05-27 21:27:55 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/word/0/study"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-05-27 21:29:35 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (2.4ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (76.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 386ms (Views: 366.8ms | ActiveRecord: 4.4ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:29:58 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"VfGg+QVNCYIiGKf44PisN5JlsGwyFEr03aXkmqCvQ2gUCFcy/lxh4aMBhtCVcYYvI0wLQXim5GP7yoMWapmHEA==", "id"=>"0"}
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT  "words"."key" FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 389ms (Views: 362.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:30:38 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (64.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 395ms (Views: 377.3ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:30:41 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"/kLcipZdOQ7mDTLavmwf5qMAzf5/vjqmdJgTsjMUKi2/uytBbUxRbWcUE/LL5TX+Eil20zUMlDFS93Q++SLuVQ==", "id"=>"0"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT  "words"."key" FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 395ms (Views: 368.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:30:54 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (4.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (71.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 399ms (Views: 377.3ms | ActiveRecord: 4.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:30:56 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"lqTMc8PMRR2zJQuFCQC2EKvWKsE2G3C3zDXYKdEo49/XXTu4ON0tfjI8Kq18iZwIGv+R7Hyp3iDqWr+lGx4npw==", "id"=>"0"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT  "words"."key" FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 401ms (Views: 375.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:31:40 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (67.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 386ms (Views: 369.4ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:31:42 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"mrAu0BDqRif6gevowf6RXShmBMr4yvM5bWNqI00Ur7vbSdkb6/suRHuYysC0d7tFmU+/57J4Xa5LDA2vhyJrww==", "id"=>"0"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT  "words"."key" FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_shim.html.erb (4.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 406ms (Views: 377.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:32:02 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (84.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 390ms (Views: 372.3ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:32:05 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"m7r6rl3Bj+IgnTQChkyqrYFVUAMTfRtextK0sq4tflvaQw1lptDngaGEFSrzxYC1MHzrLlnPtcngvdM+ZBu6Iw==", "id"=>"0"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT  "words"."key" FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 450ms (Views: 424.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:32:33 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (63.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 377ms (Views: 361.3ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:32:35 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"iOXbKDOvr5HA5eAb7N/cJEX/5pD1KwhMbrGWPBK4aSDJHCzjyL7H8kH8wTOZVvY89NZdvb+ZpttI3vGw2I6tWA==", "id"=>"0"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT  "words"."key" FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 386ms (Views: 359.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:35:06 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (72.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 650ms (Views: 633.3ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:35:10 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"jsWb10LTnx41jYq2chY2m2YdLoj119WV01bcxfX7a/vPPGwcucL3fbSUq54HnxyD1zSVpb9lewL1ObtJP82vgw==", "id"=>"0"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT  "words"."key" FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (2.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 445ms (Views: 417.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/word/0/study" for ::1 at 2019-05-27 21:36:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/word/0/study"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:36:50 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"jsWb10LTnx41jYq2chY2m2YdLoj119WV01bcxfX7a/vPPGwcucL3fbSUq54HnxyD1zSVpb9lewL1ObtJP82vgw==", "id"=>"0"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT  "words"."key" FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 407ms (Views: 380.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:37:02 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (63.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 372ms (Views: 354.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:37:03 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (105.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 511ms (Views: 490.4ms | ActiveRecord: 1.0ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDescriptionToWord (20190527124843)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDescriptionToWord (20190527124843)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "words" ADD "description" text[0m
+  [1m[35m (0.0ms)[0m  [1m[35mALTER TABLE "words" ADD "check" integer[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190527124843"]]
+  [1m[35m (20.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_microposts_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_microposts_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_microposts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_microposts_on_user_id_and_created_at' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_microposts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_microposts_on_user_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2019-05-27 21:51:51 +0900
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (3.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (111.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1177ms (Views: 1132.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/?format=csv" for 127.0.0.1 at 2019-05-27 21:52:00 +0900
+Processing by WordController#home as CSV
+  Rendering word/home.csv.ruby
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.csv.ruby (45.3ms)
+Completed 200 OK in 131ms (Views: 109.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/?format=csv" for 127.0.0.1 at 2019-05-27 21:52:00 +0900
+Processing by WordController#home as CSV
+  Rendering word/home.csv.ruby
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.csv.ruby (9.0ms)
+Completed 200 OK in 88ms (Views: 69.2ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 21:52:58 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"vrI9eCixZnpYVKbfXclvI0dQXU9RxbZzRRZiNPOHer//S8qz06AOGdlNh/coQEU79nnmYht3GORjeQW4ObG+xw==", "id"=>"0"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT  "words"."key" FROM "words" ORDER BY "words"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 490ms (Views: 460.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:55:29 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (85.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 433ms (Views: 412.2ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/word/1162/upd_add" for ::1 at 2019-05-27 21:55:32 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1162"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1162], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `+' for :check:Symbol):
+  
+app/controllers/word_controller.rb:52:in `upd_add'
+Started GET "/" for ::1 at 2019-05-27 21:56:08 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (89.2ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 477ms (Views: 457.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:56:29 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (73.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 443ms (Views: 423.7ms | ActiveRecord: 4.0ms)
+
+
+Started PUT "/word/1162/upd_add" for ::1 at 2019-05-27 21:56:31 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1162"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1162], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "words" SET "check" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["check", 1], ["updated_at", "2019-05-27 12:56:31.827839"], ["id", 1162]]
+  [1m[35m (18.9ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 1193ms (ActiveRecord: 20.9ms)
+
+
+Started PUT "/word/1162/upd_add" for ::1 at 2019-05-27 21:56:35 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1162"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1162], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 934ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 21:56:36 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (65.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 399ms (Views: 382.4ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/1162/upd_add" for ::1 at 2019-05-27 21:58:42 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1162"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1162], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.0ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/word_controller.rb:52:in `upd_add'
+Started PUT "/word/1162/upd_add" for ::1 at 2019-05-27 21:59:02 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1162"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1162], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `update_all' for #<Word:0x000000000bc31148>
+Did you mean?  updated_at
+               updated_at?
+               updated_at=):
+  
+app/controllers/word_controller.rb:52:in `upd_add'
+Started PUT "/word/1162/upd_add" for ::1 at 2019-05-27 22:00:04 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1162"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE (1162)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 3.0ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/word_controller.rb:51:in `upd_add'
+Started PUT "/word/1161/upd_add" for ::1 at 2019-05-27 22:00:07 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1161"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE (1161)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/word_controller.rb:51:in `upd_add'
+Started GET "/" for ::1 at 2019-05-27 22:00:16 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (68.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 426ms (Views: 409.7ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/1161/upd_add" for ::1 at 2019-05-27 22:00:18 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1161"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE (1161)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/word_controller.rb:51:in `upd_add'
+Started PUT "/word/1162/upd_add" for ::1 at 2019-05-27 22:01:25 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1162"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ?[0m  [["id", nil]]
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 975ms (ActiveRecord: 2.0ms)
+
+
+Started PUT "/word/1161/upd_add" for ::1 at 2019-05-27 22:01:27 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1161"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ?[0m  [["id", nil]]
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 924ms (ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/1160/upd_add" for ::1 at 2019-05-27 22:01:30 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1160"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ?[0m  [["id", nil]]
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 934ms (ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/1160/upd_add" for ::1 at 2019-05-27 22:01:31 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1160"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ?[0m  [["id", nil]]
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 945ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 22:01:45 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (3.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (99.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 445ms (Views: 425.2ms | ActiveRecord: 4.0ms)
+
+
+Started PUT "/word/1162/upd_add" for ::1 at 2019-05-27 22:01:47 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1162"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ?[0m  [["id", nil]]
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 969ms (ActiveRecord: 0.0ms)
+
+
+Started PUT "/word/1162/upd_add" for ::1 at 2019-05-27 22:01:49 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1162"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ?[0m  [["id", nil]]
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 920ms (ActiveRecord: 0.0ms)
+
+
+Started PUT "/word/1162/upd_add" for ::1 at 2019-05-27 22:02:30 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1162"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE (1162)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.0ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/word_controller.rb:51:in `upd_add'
+Started PUT "/word/1161/upd_add" for ::1 at 2019-05-27 22:07:37 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1161"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1161], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `+' for nil:NilClass):
+  
+app/controllers/word_controller.rb:51:in `upd_add'
+Started PUT "/word/1161/upd_add" for ::1 at 2019-05-27 22:09:20 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1161"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1161], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "words" SET "check" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["check", 1], ["updated_at", "2019-05-27 13:09:20.270201"], ["id", 1161]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 1171ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 22:09:25 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (89.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 462ms (Views: 440.1ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/1161/upd_add" for ::1 at 2019-05-27 22:09:27 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1161"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1161], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 991ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 22:09:30 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (63.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 416ms (Views: 399.3ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/1161/upd_add" for ::1 at 2019-05-27 22:09:32 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1161"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1161], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 994ms (ActiveRecord: 0.0ms)
+
+
+Started PUT "/word/1162/upd_add" for ::1 at 2019-05-27 22:10:25 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1162"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1162], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "words" SET "check" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["check", 2], ["updated_at", "2019-05-27 13:10:25.179142"], ["id", 1162]]
+  [1m[35m (22.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 1137ms (ActiveRecord: 26.1ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 22:10:27 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (70.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 438ms (Views: 419.5ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/word/1162/upd_add" for ::1 at 2019-05-27 22:10:29 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1162"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1162], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "words" SET "check" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["check", 3], ["updated_at", "2019-05-27 13:10:29.636554"], ["id", 1162]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 1135ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 22:10:31 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (3.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (116.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 469ms (Views: 449.7ms | ActiveRecord: 3.0ms)
+
+
+Started PUT "/word/1162/upd_add" for ::1 at 2019-05-27 22:10:35 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1162"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1162], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "words" SET "check" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["check", 4], ["updated_at", "2019-05-27 13:10:35.864728"], ["id", 1162]]
+  [1m[35m (20.8ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 1149ms (ActiveRecord: 23.8ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 22:12:03 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (77.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 404ms (Views: 382.4ms | ActiveRecord: 4.0ms)
+
+
+Started PUT "/word/1162/upd_add" for ::1 at 2019-05-27 22:12:05 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1162"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1162], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "words" SET "check" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["check", 5], ["updated_at", "2019-05-27 13:12:05.926396"], ["id", 1162]]
+  [1m[35m (14.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 1195ms (ActiveRecord: 16.1ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-27 22:12:10 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"T5UpDyBaYF7JT2Z2Pa1yMWx+nWAo3I9m4EcN1/QTQj4ObN7E20sIPUhWR15IJFgp3VcmTWJuIfHGKGpbPiWGRg==", "id"=>"0"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT  "words"."key" FROM "words" ORDER BY "words"."check" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 386ms (Views: 357.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 22:12:16 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (88.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 486ms (Views: 469.7ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/1162/upd_mns" for ::1 at 2019-05-27 22:15:43 +0900
+Processing by WordController#upd_mns as JS
+  Parameters: {"id"=>"1162"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1162], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "words" SET "check" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["check", 4], ["updated_at", "2019-05-27 13:15:43.966711"], ["id", 1162]]
+  [1m[35m (21.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_mns, rendering head :no_content
+Completed 204 No Content in 1170ms (ActiveRecord: 25.1ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 22:15:46 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (71.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 416ms (Views: 399.2ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/1162/upd_mns" for ::1 at 2019-05-27 22:15:49 +0900
+Processing by WordController#upd_mns as JS
+  Parameters: {"id"=>"1162"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1162], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "words" SET "check" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["check", 3], ["updated_at", "2019-05-27 13:15:50.062377"], ["id", 1162]]
+  [1m[35m (25.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_mns, rendering head :no_content
+Completed 204 No Content in 1153ms (ActiveRecord: 27.1ms)
+
+
+Started PUT "/word/1161/upd_add" for ::1 at 2019-05-27 22:15:51 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1161"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1161], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "words" SET "check" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["check", 2], ["updated_at", "2019-05-27 13:15:51.893343"], ["id", 1161]]
+  [1m[35m (22.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 1263ms (ActiveRecord: 25.0ms)
+
+
+Started PUT "/word/1160/upd_add" for ::1 at 2019-05-27 22:15:53 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1160"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1160], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "words" SET "check" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["check", 1], ["updated_at", "2019-05-27 13:15:53.323118"], ["id", 1160]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 1133ms (ActiveRecord: 16.0ms)
+
+
+Started PUT "/word/1159/upd_add" for ::1 at 2019-05-27 22:15:54 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1159"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1159], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "words" SET "check" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["check", 1], ["updated_at", "2019-05-27 13:15:54.542119"], ["id", 1159]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 1129ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 22:15:56 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (70.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 421ms (Views: 405.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 22:16:38 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (75.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 515ms (Views: 492.9ms | ActiveRecord: 4.0ms)
+
+
+Started PUT "/word/1158/upd_add" for ::1 at 2019-05-27 22:16:41 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1158"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1158], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "words" SET "check" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["check", 1], ["updated_at", "2019-05-27 13:16:41.650012"], ["id", 1158]]
+  [1m[35m (40.8ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 1262ms (ActiveRecord: 41.8ms)
+
+
+Started PUT "/word/1157/upd_add" for ::1 at 2019-05-27 22:16:43 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1157"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1157], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "words" SET "check" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["check", 1], ["updated_at", "2019-05-27 13:16:43.819949"], ["id", 1157]]
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 1155ms (ActiveRecord: 16.5ms)
+
+
+Started PUT "/word/1156/upd_add" for ::1 at 2019-05-27 22:16:44 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1156"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1156], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "words" SET "check" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["check", 1], ["updated_at", "2019-05-27 13:16:45.023376"], ["id", 1156]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 1245ms (ActiveRecord: 15.0ms)
+
+
+Started PUT "/word/1155/upd_add" for ::1 at 2019-05-27 22:16:46 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1155"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1155], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "words" SET "check" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["check", 1], ["updated_at", "2019-05-27 13:16:46.314610"], ["id", 1155]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 1135ms (ActiveRecord: 18.0ms)
+
+
+Started PUT "/word/1154/upd_add" for ::1 at 2019-05-27 22:16:47 +0900
+Processing by WordController#upd_add as JS
+  Parameters: {"id"=>"1154"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1154], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "words" SET "check" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["check", 1], ["updated_at", "2019-05-27 13:16:47.493078"], ["id", 1154]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for WordController#upd_add, rendering head :no_content
+Completed 204 No Content in 1229ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 22:16:50 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (65.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 419ms (Views: 401.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 22:18:41 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (182.7ms)
+Completed 500 Internal Server Error in 243ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `show_path' for #<#<Class:0x000000000c8494f8>:0x000000000bcbac68>):
+    18:         <% if !@words.nil? %>
+    19:         <% @words.each do |f| %>
+    20:         <tr>
+    21:           <td><%= link_to 'U', show_path(f), target: :_blank  %></td>
+    22:           <td><%= link_to f.key, (URI.encode "https://www.google.com/search?hl=jp&gl=JP&q=#{f.key}"), target: :_blank  %></td>
+    23:           <td><%= f.check.to_s  %></td>
+    24:           <td><%= link_to '+', upd_add_word_path(f), remote: true, method: :put, class: 'btn btn-primary', data:{disable_with:'..'} %></td>
+  
+app/views/word/home.html.erb:21:in `block in _app_views_word_home_html_erb__753508391_98950160'
+app/views/word/home.html.erb:19:in `_app_views_word_home_html_erb__753508391_98950160'
+Started GET "/" for ::1 at 2019-05-27 22:18:51 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (196.1ms)
+Completed 500 Internal Server Error in 258ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `show_path' for #<#<Class:0x000000000c8494f8>:0x000000000c5b80b8>):
+    19:         <% if !@words.nil? %>
+    20:         <% @words.each do |f| %>
+    21:         <tr>
+    22:           <td><%= link_to 'U', show_path(f), target: :_blank  %></td>
+    23:           <td><%= link_to f.key, (URI.encode "https://www.google.com/search?hl=jp&gl=JP&q=#{f.key}"), target: :_blank  %></td>
+    24:           <td><%= f.check.to_s  %></td>
+    25:           <td><%= link_to '+', upd_add_word_path(f), remote: true, method: :put, class: 'btn btn-primary', data:{disable_with:'..'} %></td>
+  
+app/views/word/home.html.erb:22:in `block in _app_views_word_home_html_erb__753508391_103663420'
+app/views/word/home.html.erb:20:in `_app_views_word_home_html_erb__753508391_103663420'
+Started GET "/" for ::1 at 2019-05-27 22:19:09 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (253.1ms)
+Completed 500 Internal Server Error in 314ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `show_word_path' for #<#<Class:0x000000000c8494f8>:0x0000000005c618f8>):
+    19:         <% if !@words.nil? %>
+    20:         <% @words.each do |f| %>
+    21:         <tr>
+    22:           <td><%= link_to 'U', show_word_path(f), target: :_blank  %></td>
+    23:           <td><%= link_to f.key, (URI.encode "https://www.google.com/search?hl=jp&gl=JP&q=#{f.key}"), target: :_blank  %></td>
+    24:           <td><%= f.check.to_s  %></td>
+    25:           <td><%= link_to '+', upd_add_word_path(f), remote: true, method: :put, class: 'btn btn-primary', data:{disable_with:'..'} %></td>
+  
+app/views/word/home.html.erb:22:in `block in _app_views_word_home_html_erb__753508391_48630560'
+app/views/word/home.html.erb:20:in `_app_views_word_home_html_erb__753508391_48630560'
+Started GET "/" for ::1 at 2019-05-27 22:20:16 +0900
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (132.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (24.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1116ms (Views: 1085.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/word/1153" for ::1 at 2019-05-27 22:20:23 +0900
+Processing by WordController#show as HTML
+  Parameters: {"id"=>"1153"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1153], ["LIMIT", 1]]
+  Rendering word/show.html.erb within layouts/application
+  Rendered word/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 1201ms (Views: 397.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/word/1153" for ::1 at 2019-05-27 22:20:30 +0900
+Processing by WordController#show as HTML
+  Parameters: {"id"=>"1153"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1153], ["LIMIT", 1]]
+  Rendering word/show.html.erb within layouts/application
+  Rendered word/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (2.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 886ms (Views: 449.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 22:21:10 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (3.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (118.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 518ms (Views: 496.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 22:21:29 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (74.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 397ms (Views: 379.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/word/1153" for ::1 at 2019-05-27 22:21:32 +0900
+Processing by WordController#show as HTML
+  Parameters: {"id"=>"1153"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1153], ["LIMIT", 1]]
+  Rendering word/show.html.erb within layouts/application
+  Rendered word/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (3.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 881ms (Views: 384.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 22:21:41 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (3.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (126.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 523ms (Views: 501.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/word/1153" for ::1 at 2019-05-27 22:22:56 +0900
+Processing by WordController#show as HTML
+  Parameters: {"id"=>"1153"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1153], ["LIMIT", 1]]
+  Rendering word/show.html.erb within layouts/application
+  Rendered word/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 1034ms (Views: 457.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/word/1153" for ::1 at 2019-05-27 22:22:57 +0900
+Processing by WordController#show as HTML
+  Parameters: {"id"=>"1153"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1153], ["LIMIT", 1]]
+  Rendering word/show.html.erb within layouts/application
+  Rendered word/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 982ms (Views: 383.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/word/1153" for ::1 at 2019-05-27 22:24:10 +0900
+Processing by WordController#show as HTML
+  Parameters: {"id"=>"1153"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1153], ["LIMIT", 1]]
+  Rendering word/show.html.erb within layouts/application
+  Rendered word/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 920ms (Views: 338.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/word/1153" for ::1 at 2019-05-27 22:24:38 +0900
+Processing by WordController#show as HTML
+  Parameters: {"id"=>"1153"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1153], ["LIMIT", 1]]
+  Rendering word/show.html.erb within layouts/application
+  Rendered word/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 855ms (Views: 343.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/word/1153" for ::1 at 2019-05-27 22:25:26 +0900
+Processing by WordController#show as HTML
+  Parameters: {"id"=>"1153"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1153], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 426ms (ActiveRecord: 1.0ms)
+
+
+  
+Nokogiri::XML::XPath::SyntaxError (ERROR: Invalid expression: //h3/[@class="r"]):
+  
+app/controllers/word_controller.rb:148:in `noko'
+app/controllers/word_controller.rb:94:in `show'
+Started GET "/word/1153" for ::1 at 2019-05-27 22:26:16 +0900
+Processing by WordController#show as HTML
+  Parameters: {"id"=>"1153"}
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1153], ["LIMIT", 1]]
+  Rendering word/show.html.erb within layouts/application
+  Rendered word/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 872ms (Views: 361.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/word/1153" for ::1 at 2019-05-27 22:26:20 +0900
+Processing by WordController#show as HTML
+  Parameters: {"id"=>"1153"}
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1153], ["LIMIT", 1]]
+  Rendering word/show.html.erb within layouts/application
+  Rendered word/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 722ms (Views: 304.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 22:28:26 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (80.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 414ms (Views: 396.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 22:29:12 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (71.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 318ms (Views: 302.2ms | ActiveRecord: 1.0ms)
+
+

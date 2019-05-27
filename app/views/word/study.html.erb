@@ -1,0 +1,36 @@
+<div id="main">
+
+   <h1 id="target">Start (touch/click)</h1>
+
+ </div>
+</body>
+</html>
+<script>
+(function() {
+ 'use strict';
+  const list = <%= @words_json %>;
+  console.log(list);
+
+
+    var i = 0;
+    function setTarget() {
+      document.getElementById('target').textContent  = list[i];
+      i++;
+      if (i == list.length) i = 0;
+    }
+
+    var flg = false;
+    window.addEventListener('touchstart', function() {
+      flg = true;
+      setTarget();
+    });
+    window.addEventListener('click', function() {
+      if (flg) {
+        flg = false;
+      } else {
+       setTarget();
+      }
+    });
+
+  })();
+</script>

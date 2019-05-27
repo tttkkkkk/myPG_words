@@ -5,7 +5,7 @@ class WordController < ApplicationController
   def home
     puts '** home ***'
     # @words = Word.all
-    @words = Word.all.order(created_at: "DESC")
+    @words = Word.all.order(check: "ASC").order(created_at: "DESC")
 
     # respond_to do |format|
     #   format.html do
@@ -34,9 +34,31 @@ class WordController < ApplicationController
     redirect_to action: 'home'
   end
 
+  def study
+    @words = Word.limit(10).order(check: "ASC")
+
+    @keys = @words.pluck(:key)
+    puts @keys.length
+    puts @keys
+
+    @words_json = @keys.to_json.html_safe
+    puts @words_json
+
+  end
+
   def upd_add
     @word = Word.find(params[:id])
-    @word.update_attribute(:zumi, true)
+    @word[:check] = @word[:check].to_i + 1
+    @word.save
+
+    #NGエラー
+    # Word.where(params[:id]).update("check=check+1")
+
+
+    # @word = Word.find(params[:id])
+    # @word.update_attribute(:zumi, true)
+
+
     # もともと（これだと一番上に戻ってしまう）
     # redirect_to action: 'home'
 
@@ -52,13 +74,19 @@ class WordController < ApplicationController
   end
 
   def upd_mns
+
     @word = Word.find(params[:id])
-    @word.update_attribute(:zumi, false)
-    # redirect_to action: 'home'
-    respond_to do |format|
-     format.html { redirect_to @word }
-     format.js
-    end
+    @word[:check] = @word[:check].to_i - 1
+    @word.save
+
+
+    # @word = Word.find(params[:id])
+    # @word.update_attribute(:zumi, false)
+    # # redirect_to action: 'home'
+    # respond_to do |format|
+    #  format.html { redirect_to @word }
+    #  format.js
+    # end
   end
 
   def show
@@ -115,14 +143,17 @@ class WordController < ApplicationController
      #   puts f.text
      # end
 
+
+     puts 'vvvvvvvvvvvvvvvvvv'
      doc.xpath('//h3[@class="r"]').each do |f|
-       # puts f
+       puts f
        @tmp1.push(f.text)
        url = CGI.unescape(CGI.unescapeHTML(f.xpath('a/@href').text))
        if !url.empty? then
          @tmp2.push(url.split('&sa=U&ved=').first.sub('/url?q=', ''))
        end
      end
+     puts '^^^^^^^^^^^^^^^^^^^'
 
      doc = Nokogiri::HTML.parse(html, nil, charset)
      # @tmp3 = doc.css('h3')      #Google（タイトル）
