@@ -4,8 +4,12 @@ class WordController < ApplicationController
 
   def home
     puts '** home ***'
+    @q = Word.ransack(params[:q])
+    @words = @q.result(distinct: true).order(check: "ASC").order(created_at: "DESC")
+
     # @words = Word.all
-    @words = Word.all.order(check: "ASC").order(created_at: "DESC")
+    # @words = Word.all.order(check: "ASC").order(created_at: "DESC")
+
 
     # respond_to do |format|
     #   format.html do
@@ -35,7 +39,11 @@ class WordController < ApplicationController
   end
 
   def study
-    @words = Word.limit(10).order(check: "ASC")
+    #検索結果が得られない。。（保留中 2019/5/29
+    @q = Word.ransack(params[:q])
+    @words = @q.result(distinct: true)
+
+    # @words = Word.limit(10).order(check: "ASC")
 
     @keys = @words.pluck(:key)
     puts @keys.length
@@ -103,6 +111,12 @@ class WordController < ApplicationController
   def del_all
     Word.destroy_all
     redirect_to action: 'home'
+  end
+
+  def search
+    @q = Word.ransack(params[:q])
+    @words = @q.result(distinct: true)
+    render 'home'
   end
 
   private

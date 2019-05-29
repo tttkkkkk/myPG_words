@@ -46595,3 +46595,493 @@ Processing by WordController#home as HTML
 Completed 200 OK in 318ms (Views: 302.2ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for ::1 at 2019-05-29 21:18:24 +0900
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (239.2ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (36.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 1662ms (Views: 1614.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-29 21:29:43 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  Rendered word/home.html.erb within layouts/application (41.9ms)
+Completed 500 Internal Server Error in 122ms
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"search", :controller=>"word"}, missing required keys: [:id]):
+     6: 
+     7:      <div class="container">
+     8:       <h3>Please check words..</h3> <button id="btnDown" href="#end">scroll</button>
+     9:       <%= search_form_for @q, url: search_word_path do |f| %>
+    10:       <%= f.label :title_start, "検索" %>
+    11:       <%= f.search_field :title_or_content_cont %>
+    12:       <%= f.submit  class: "btn btn-sm"%>
+  
+app/views/word/home.html.erb:9:in `_app_views_word_home_html_erb__426231686_103995600'
+Started GET "/" for ::1 at 2019-05-29 21:32:09 +0900
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  Rendered word/home.html.erb within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No Ransack::Search object was provided to search_form_for!):
+     6: 
+     7:      <div class="container">
+     8:       <h3>Please check words..</h3> <button id="btnDown" href="#end">scroll</button>
+     9:       <%= search_form_for @q, url: search_path do |f| %>
+    10:       <%= f.label :title_start, "検索" %>
+    11:       <%= f.search_field :title_or_content_cont %>
+    12:       <%= f.submit  class: "btn btn-sm"%>
+  
+app/views/word/home.html.erb:9:in `_app_views_word_home_html_erb__537672479_48151260'
+Started GET "/" for ::1 at 2019-05-29 21:37:47 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  Rendered word/home.html.erb within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 86ms
+
+
+  
+ActionView::Template::Error (No Ransack::Search object was provided to search_form_for!):
+     7:      <div class="container">
+     8:       <h3>Please check words..</h3> <button id="btnDown" href="#end">scroll</button>
+     9: 
+    10:       <%= search_form_for @q, url: search_path  do |f| %>
+    11:       <%= f.label :title_start, "検索" %>
+    12:       <%= f.search_field :title_or_content_cont %>
+    13:       <%= f.submit  class: "btn btn-sm"%>
+  
+app/views/word/home.html.erb:10:in `_app_views_word_home_html_erb__537672479_47742920'
+Started GET "/" for ::1 at 2019-05-29 21:41:08 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  Rendered word/home.html.erb within layouts/application (39.5ms)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `title_or_content_cont' for Ransack::Search<class: Word, base: Grouping <combinator: and>>:Ransack::Search):
+     9: 
+    10:       <%= search_form_for @q, url: search_path  do |f| %>
+    11:       <%= f.label :title_start, "検索" %>
+    12:       <%= f.search_field :title_or_content_cont %>
+    13:       <%= f.submit  class: "btn btn-sm"%>
+    14:       <% end %>
+    15: 
+  
+app/views/word/home.html.erb:12:in `block in _app_views_word_home_html_erb__537672479_48463640'
+app/views/word/home.html.erb:10:in `_app_views_word_home_html_erb__537672479_48463640'
+Started GET "/" for ::1 at 2019-05-29 21:43:39 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT DISTINCT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (649.2ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 1783ms (Views: 1762.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q%5Bkey_cont%5D=js&commit=Search" for ::1 at 2019-05-29 21:43:51 +0900
+Processing by WordController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"key_cont"=>"js"}, "commit"=>"Search"}
+Completed 406 Not Acceptable in 711ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (WordController#search is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.7) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/search?utf8=%E2%9C%93&q%5Bkey_cont%5D=js&commit=Search" for ::1 at 2019-05-29 21:45:57 +0900
+Processing by WordController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"key_cont"=>"js"}, "commit"=>"Search"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-29 21:45:58 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT DISTINCT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (115.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 461ms (Views: 442.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q%5Bkey_cont%5D=%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88&commit=Search" for ::1 at 2019-05-29 21:46:04 +0900
+Processing by WordController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"key_cont"=>"イベント"}, "commit"=>"Search"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-29 21:46:04 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (73.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 431ms (Views: 413.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-29 21:46:35 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT DISTINCT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (89.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 405ms (Views: 379.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q%5Bkey_cont%5D=%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88&commit=Search" for ::1 at 2019-05-29 21:46:38 +0900
+Processing by WordController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"key_cont"=>"イベント"}, "commit"=>"Search"}
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "words".* FROM "words" WHERE ("words"."key" LIKE '%イベント%')[0m
+  Rendered word/home.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 338ms (Views: 335.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q%5Bkey_cont%5D=Rails&commit=Search" for ::1 at 2019-05-29 21:46:47 +0900
+Processing by WordController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"key_cont"=>"Rails"}, "commit"=>"Search"}
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "words".* FROM "words" WHERE ("words"."key" LIKE '%Rails%')[0m
+  Rendered word/home.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 342ms (Views: 341.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q%5Bkey_cont%5D=Ruby+&commit=Search" for ::1 at 2019-05-29 21:46:53 +0900
+Processing by WordController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"key_cont"=>"Ruby "}, "commit"=>"Search"}
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "words".* FROM "words" WHERE ("words"."key" LIKE '%Ruby %')[0m
+  Rendered word/home.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 349ms (Views: 347.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q%5Bkey_cont%5D=key&commit=Search" for ::1 at 2019-05-29 21:46:59 +0900
+Processing by WordController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"key_cont"=>"key"}, "commit"=>"Search"}
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "words".* FROM "words" WHERE ("words"."key" LIKE '%key%')[0m
+  Rendered word/home.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 347ms (Views: 345.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q%5Bkey_cont%5D=ho&commit=Search" for ::1 at 2019-05-29 21:47:03 +0900
+Processing by WordController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"key_cont"=>"ho"}, "commit"=>"Search"}
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "words".* FROM "words" WHERE ("words"."key" LIKE '%ho%')[0m
+  Rendered word/home.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 326ms (Views: 324.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q%5Bkey_cont%5D=ho&commit=Search" for ::1 at 2019-05-29 21:47:23 +0900
+Processing by WordController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"key_cont"=>"ho"}, "commit"=>"Search"}
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "words".* FROM "words" WHERE ("words"."key" LIKE '%ho%')[0m
+  Rendered word/home.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 311ms (Views: 309.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q%5Bkey_cont%5D=ho&commit=Search" for ::1 at 2019-05-29 21:47:48 +0900
+Processing by WordController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"key_cont"=>"ho"}, "commit"=>"Search"}
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "words".* FROM "words" WHERE ("words"."key" LIKE '%ho%')[0m
+  Rendered word/home.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 384ms (Views: 382.6ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-29 21:50:08 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"QeDWGRQ4pk/oQbDktpbXr2+j/ZOgNFSaRpAQhiFGQgGhmOvum7N+3E61ogs0vTbj5D3O9hsgqauMvyMZhlocgg==", "id"=>"0"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `pluck' for nil:NilClass):
+  
+app/controllers/word_controller.rb:42:in `study'
+Started GET "/search?utf8=%E2%9C%93&q%5Bkey_cont%5D=ho&commit=Search" for ::1 at 2019-05-29 21:51:31 +0900
+Processing by WordController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"key_cont"=>"ho"}, "commit"=>"Search"}
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "words".* FROM "words" WHERE ("words"."key" LIKE '%ho%')[0m
+  Rendered word/home.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 349ms (Views: 340.7ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-29 21:51:33 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"Sdstovm2YcHTPpvIDKTWp8gypqNcSSGw1cHKVsKGqXmpoxBVdj25UnXKiSeOjzfrQ6yVxudd3IEf7vnJZZr3+g==", "id"=>"0"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pluck' for nil:NilClass):
+  
+app/controllers/word_controller.rb:45:in `study'
+Started PUT "/word/0/study" for ::1 at 2019-05-29 21:52:06 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"Sdstovm2YcHTPpvIDKTWp8gypqNcSSGw1cHKVsKGqXmpoxBVdj25UnXKiSeOjzfrQ6yVxudd3IEf7vnJZZr3+g==", "id"=>"0"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `pluck' for nil:NilClass):
+  
+app/controllers/word_controller.rb:44:in `study'
+Started GET "/search?utf8=%E2%9C%93&q%5Bkey_cont%5D=ho&commit=Search" for ::1 at 2019-05-29 21:53:06 +0900
+Processing by WordController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"key_cont"=>"ho"}, "commit"=>"Search"}
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "words".* FROM "words" WHERE ("words"."key" LIKE '%ho%')[0m
+  Rendered word/home.html.erb within layouts/application (21.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 467ms (Views: 453.1ms | ActiveRecord: 3.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-29 21:53:08 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"qfLdRrS2T6J7s9Dl6WNiUeQZQn2Mulj0xH/7v8LxsVlJiuCxOz2XMd1HwgprSIMdb4dxGDeupcUOUMggZe3v2g==", "id"=>"0"}
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT DISTINCT "words"."key" FROM "words"[0m
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 528ms (Views: 402.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-29 21:53:14 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (72.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 416ms (Views: 398.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q%5Bkey_cont%5D=%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88&commit=Search" for ::1 at 2019-05-29 21:53:24 +0900
+Processing by WordController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"key_cont"=>"イベント"}, "commit"=>"Search"}
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "words".* FROM "words" WHERE ("words"."key" LIKE '%イベント%')[0m
+  Rendered word/home.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 350ms (Views: 348.3ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word/0/study" for ::1 at 2019-05-29 21:53:26 +0900
+Processing by WordController#study as HTML
+  Parameters: {"authenticity_token"=>"ttg82pZqocT/CqOWzMTuNRM4Xp1jbAFsZn/v5WYhyGRWoAEtGeF5V1n+sXlO7w95mKZt+Nh4/F2sUNx6wT2W5w==", "id"=>"0"}
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT DISTINCT "words"."key" FROM "words"[0m
+  Rendering word/study.html.erb within layouts/application
+  Rendered word/study.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 432ms (Views: 333.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-29 21:53:33 +0900
+Processing by WordController#home as HTML
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (7.0ms)[0m  [1m[34mSELECT DISTINCT "words".* FROM "words" ORDER BY "words"."check" ASC, "words"."created_at" DESC[0m
+  Rendered word/home.html.erb within layouts/application (75.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 414ms (Views: 391.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q%5Bkey_cont%5D=%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88&commit=Search" for ::1 at 2019-05-29 21:55:31 +0900
+Processing by WordController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"key_cont"=>"イベント"}, "commit"=>"Search"}
+Redirected to 
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"study", :controller=>"word"}):
+  
+app/controllers/word_controller.rb:121:in `search'
+Started GET "/search?utf8=%E2%9C%93&q%5Bkey_cont%5D=%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88&commit=Search" for ::1 at 2019-05-29 21:56:07 +0900
+Processing by WordController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"key_cont"=>"イベント"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"study", :controller=>"word"}, missing required keys: [:id]):
+  
+app/controllers/word_controller.rb:121:in `search'
+Started GET "/search?utf8=%E2%9C%93&q%5Bkey_cont%5D=%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88&commit=Search" for ::1 at 2019-05-29 21:56:24 +0900
+Processing by WordController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"key_cont"=>"イベント"}, "commit"=>"Search"}
+Redirected to http://localhost:3000/word/0/study
+Completed 302 Found in 10ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/word/0/study" for ::1 at 2019-05-29 21:56:24 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/word/0/study"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/search?utf8=%E2%9C%93&q%5Bkey_cont%5D=%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88&commit=Search" for ::1 at 2019-05-29 21:57:28 +0900
+Processing by WordController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"key_cont"=>"イベント"}, "commit"=>"Search"}
+  Rendering word/home.html.erb within layouts/application
+  [1m[36mWord Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "words".* FROM "words" WHERE ("words"."key" LIKE '%イベント%')[0m
+  Rendered word/home.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 397ms (Views: 388.3ms | ActiveRecord: 3.0ms)
+
+

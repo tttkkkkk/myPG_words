@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get  '/about',   to: 'word#about'
+  get  '/search',   to: 'word#search'
   root 'word#home'
   resources :word do
     member do
