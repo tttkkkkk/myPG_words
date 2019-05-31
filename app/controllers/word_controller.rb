@@ -56,7 +56,7 @@ class WordController < ApplicationController
 
   def study_rails
     puts 'search_rails --------------'
-    @words = Word.where('key LIKE ?', "%Rails%").order(check: "ASC").first
+    @words = Word.where('key LIKE ?', "%Rails%").order(check: "ASC", id: "ASC").first
 
   end
 
@@ -66,7 +66,7 @@ class WordController < ApplicationController
     # @q = Word.ransack(params[:q]).ransack(s: "check ASC")
     @q = Word.ransack(params[:q])
     @words = @q.result(distinct: true)
-    @words = @words.order(check: "ASC")
+    @words = @words.order(check: "ASC", id: "ASC")
     render 'home'
   end
 
@@ -74,7 +74,7 @@ class WordController < ApplicationController
   def study_next
     # @words = Word.next(params[:id])
     # @words = Word.where("id > ?", params[:id]).order("id ASC").first
-    @words = Word.where("(key LIKE ?) and (id <> ?)","%Rails%" , params[:id]).order(check: "ASC").first
+    @words = Word.where("(key LIKE ?) and (id > ?)","%Rails%" , params[:id]).order(check: "ASC").first
     render 'study_rails'
   end
   def study_upd_add
