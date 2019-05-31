@@ -1,3 +1,5 @@
+require "word.rb"
+
 class WordController < ApplicationController
   # require "thor"
   # require "pry"
@@ -39,20 +41,54 @@ class WordController < ApplicationController
   end
 
   def study
-    #検索結果が得られない。。（保留中 2019/5/29
-    @q = Word.ransack(params[:q])
-    @words = @q.result(distinct: true)
-
-    # @words = Word.limit(10).order(check: "ASC")
-
+    puts 'search --------------'
+    # #検索結果が得られない。。（保留中 2019/5/29
+    # @q = Word.ransack(params[:q])
+    # @words = @q.result(distinct: true)
+    @words = Word.limit(10).order(check: "ASC")
     @keys = @words.pluck(:key)
     puts @keys.length
     puts @keys
 
     @words_json = @keys.to_json.html_safe
     puts @words_json
+  end
+
+  def study_rails
+    puts 'search_rails --------------'
+    @words = Word.where('key LIKE ?', "%Rails%").order(check: "ASC").first
 
   end
+
+  def search
+    puts 'search --------------'
+    # @q = Word.ransack(params[:q])
+    # @q = Word.ransack(params[:q]).ransack(s: "check ASC")
+    @q = Word.ransack(params[:q])
+    @words = @q.result(distinct: true)
+    @words = @words.order(check: "ASC")
+    render 'home'
+  end
+
+
+
+  def study_upd_add
+    upd_add
+     # @words = Word.next(params[:id])
+     # @words = Word.where("id > ?", params[:id]).order("id ASC").first
+     @words = Word.where("(key LIKE ?) and (id <> ?)","%Rails%" , params[:id]).order(check: "ASC").first
+     render 'study_rails'
+
+  end
+  def study_upd_mns
+    upd_mns
+    # @words = Word.next(params[:id])
+    # @words = Word.where("id > ?", params[:id]).order("id ASC").first
+    @words = Word.where("(key LIKE ?) and (id <> ?)","%Rails%" , params[:id]).order(check: "ASC").first
+    render 'study_rails'
+
+  end
+
 
   def upd_add
     @word = Word.find(params[:id])
@@ -111,12 +147,6 @@ class WordController < ApplicationController
   def del_all
     Word.destroy_all
     redirect_to action: 'home'
-  end
-
-  def search
-    @q = Word.ransack(params[:q])
-    @words = @q.result(distinct: true)
-    render 'home'
   end
 
   private

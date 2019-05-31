@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20190527124843) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"
-    t.integer "check"
+    t.integer "check", default: 0
   end
 
 end

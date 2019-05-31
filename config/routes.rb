@@ -2,9 +2,16 @@ Rails.application.routes.draw do
 
   get  '/about',   to: 'word#about'
   get  '/search',   to: 'word#search'
+
+  put  '/study_rails',   to: 'word#study_rails'
+
   root 'word#home'
   resources :word do
     member do
+
+      put 'study_upd_add'
+      put 'study_upd_mns'
+
       put 'study'
       put 'upd_add'
       put 'upd_mns'
