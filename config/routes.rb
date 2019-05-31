@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
       put 'study_upd_add'
       put 'study_upd_mns'
+      put 'study_next'
 
       put 'study'
       put 'upd_add'

@@ -71,22 +71,19 @@ class WordController < ApplicationController
   end
 
 
-
-  def study_upd_add
-    upd_add
-     # @words = Word.next(params[:id])
-     # @words = Word.where("id > ?", params[:id]).order("id ASC").first
-     @words = Word.where("(key LIKE ?) and (id <> ?)","%Rails%" , params[:id]).order(check: "ASC").first
-     render 'study_rails'
-
-  end
-  def study_upd_mns
-    upd_mns
+  def study_next
     # @words = Word.next(params[:id])
     # @words = Word.where("id > ?", params[:id]).order("id ASC").first
     @words = Word.where("(key LIKE ?) and (id <> ?)","%Rails%" , params[:id]).order(check: "ASC").first
     render 'study_rails'
-
+  end
+  def study_upd_add
+    upd_add
+    study_next
+  end
+  def study_upd_mns
+    upd_mns
+    study_next
   end
 
 
