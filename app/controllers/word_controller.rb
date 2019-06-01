@@ -72,10 +72,18 @@ class WordController < ApplicationController
 
 
   def study_next
+
+
     # @words = Word.next(params[:id])
     # @words = Word.where("id > ?", params[:id]).order("id ASC").first
+
     @words = Word.where("(key LIKE ?) and (id > ?)","%Rails%" , params[:id]).order(check: "ASC").first
-    render 'study_rails'
+    if @words.nil?
+      #TODO フラッシュほしい
+      redirect_to action: 'home'
+    else
+      render 'study_rails'
+    end
   end
   def study_upd_add
     upd_add
