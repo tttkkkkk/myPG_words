@@ -24,6 +24,7 @@
         </thead>
         <tbody>
         <% if !@words.nil? %>
+        <%= @words.count %>
         <% @words.each do |f| %>
         <tr>
           <td><%= link_to '.', word_path(f) %></td>

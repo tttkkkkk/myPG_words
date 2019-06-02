@@ -9,9 +9,13 @@ class WordController < ApplicationController
     @q = Word.ransack(params[:q])
     @words = @q.result(distinct: true).order(check: "ASC").order(created_at: "DESC")
 
+    if Rails.cache.exist?('cnt')
+      Rails.cache.delete('cnt')
+      Rails.cache.write('cnt', '1')
+    end
+
     # @words = Word.all
     # @words = Word.all.order(check: "ASC").order(created_at: "DESC")
-
 
     # respond_to do |format|
     #   format.html do
@@ -56,8 +60,7 @@ class WordController < ApplicationController
 
   def study_rails
     puts 'search_rails --------------'
-    @words = Word.where('key LIKE ?', "%Rails%").order(check: "ASC", id: "ASC").first
-
+    @words = Word.where('key LIKE ?', "%Rails%").order(id: "ASC").first
   end
 
   def search
@@ -73,6 +76,9 @@ class WordController < ApplicationController
 
   def study_next
 
+    @cnt_all = Word.where('key LIKE ?', "%Rails%").count
+    @cnt = Rails.cache.read('cnt').to_i + 1
+    Rails.cache.write('cnt', @cnt.to_s)
 
     # @words = Word.next(params[:id])
     # @words = Word.where("id > ?", params[:id]).order("id ASC").first
