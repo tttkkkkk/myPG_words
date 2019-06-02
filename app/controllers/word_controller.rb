@@ -83,7 +83,7 @@ class WordController < ApplicationController
     # @words = Word.next(params[:id])
     # @words = Word.where("id > ?", params[:id]).order("id ASC").first
 
-    @words = Word.where("(key LIKE ?) and (id > ?)","%Rails%" , params[:id]).order(check: "ASC").first
+    @words = Word.where("(key LIKE ?) and (id > ?)","%Rails%" , params[:id]).order(id: "ASC").first
     if @words.nil?
       #TODO フラッシュほしい
       redirect_to action: 'home'
