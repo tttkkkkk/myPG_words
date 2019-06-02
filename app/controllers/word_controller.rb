@@ -60,7 +60,10 @@ class WordController < ApplicationController
 
   def study_rails
     puts 'search_rails --------------'
-    @words = Word.where('key LIKE ?', "%Rails%").order(id: "ASC").first
+    # @words = Word.where('key LIKE ?', "%Rails%").order(id: "ASC").first
+    id = Word.where('key LIKE ?', "%Rails%").pluck(:id)
+    @words = Word.find_by(id: id.sample)
+
   end
 
   def search
@@ -73,9 +76,7 @@ class WordController < ApplicationController
     render 'home'
   end
 
-
   def study_next
-
     @cnt_all = Word.where('key LIKE ?', "%Rails%").count
     @cnt = Rails.cache.read('cnt').to_i + 1
     Rails.cache.write('cnt', @cnt.to_s)
@@ -91,6 +92,7 @@ class WordController < ApplicationController
       render 'study_rails'
     end
   end
+
   def study_upd_add
     upd_add
     study_next
