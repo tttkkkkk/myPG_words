@@ -92,6 +92,18 @@ class WordController < ApplicationController
       render 'study_rails'
     end
   end
+  def study_back
+    @cnt_all = Word.where('key LIKE ?', "%Rails%").count
+    @cnt = Rails.cache.read('cnt').to_i - 1
+    Rails.cache.write('cnt', @cnt.to_s)
+    @words = Word.where("(key LIKE ?) and (id < ?)","%Rails%" , params[:id]).order(id: "DESC").first
+    if @words.nil?
+      #TODO フラッシュほしい
+      redirect_to action: 'home'
+    else
+      render 'study_rails'
+    end
+  end
 
   def study_upd_add
     upd_add
