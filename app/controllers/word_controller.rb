@@ -62,9 +62,17 @@ class WordController < ApplicationController
     puts 'search_rails --------------'
     # @words = Word.where('key LIKE ?', "%Rails%").order(id: "ASC").first
     id = Word.where('key LIKE ?', "%Rails%").pluck(:id)
-    @words = Word.find_by(id: id.sample)
+    # 任意のID取得
+    idx = id.sample
+    @words = Word.find_by(id: idx)
+    #総数
+    @cnt_all = id.length
+    #インデックス（表示用に+1）
+    @cnt = id.find_index(idx) + 1
 
-  end
+    Rails.cache.write('cnt_all', @cnt_all.to_s)
+    Rails.cache.write('cnt', @cnt.to_s)
+end
 
   def search
     puts 'search --------------'
@@ -77,7 +85,7 @@ class WordController < ApplicationController
   end
 
   def study_next
-    @cnt_all = Word.where('key LIKE ?', "%Rails%").count
+    @cnt_all = Rails.cache.read('cnt_all').to_i
     @cnt = Rails.cache.read('cnt').to_i + 1
     Rails.cache.write('cnt', @cnt.to_s)
 
