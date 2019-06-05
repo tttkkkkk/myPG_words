@@ -1,0 +1,36 @@
+<div id="main">
+   <div style="height:170px;">
+   <%= @cnt%>/<%=@cnt_all %>
+   <h3><%= link_to @words.key, (URI.encode "https://www.google.com/search?hl=jp&gl=JP&q=#{@words.key}"), target: :_blank  %></h3>
+   </div>
+   <table class="table">
+     <thead>
+       <th  class="col-xs-1" scope="col"></th>
+       <th  class="col-xs-1" scope="col"></th>
+       <th  class="col-xs-3" scope="col"></th>
+       <th  class="col-xs-3" scope="col"></th>
+     </thead>
+     <tbody>
+     <tr>
+       <td></td>
+       <td></td>
+       <td><%= link_to '+', study_upd_add_word_path(@words), method: :put, class: 'btn btn-primary btn-block btn-lg' %></td>
+       <td><%= link_to '-', study_upd_mns_word_path(@words), method: :put, class: 'btn btn-primary btn-block btn-lg' %></td>
+     </tr>
+     <tr>
+       <td></td>
+       <td></td>
+       <tk9d></td>
+       <td></td>
+     </tr>
+     <tr>
+       <td></td>
+       <td></td>
+       <td><%= link_to '<<<', study_back_word_path(@words), method: :put, class: 'btn btn-info btn-block btn-lg' %></td>
+       <td><%= link_to '>>>', study_next_word_path(@words), method: :put, class: 'btn btn-info btn-block btn-lg' %></td>
+     </tr>
+     </tbody>
+   </table>
+ </div>
+</body>
+</html>

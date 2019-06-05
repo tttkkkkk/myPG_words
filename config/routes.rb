@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get  '/search',   to: 'word#search'
 
   put  '/study_rails',   to: 'word#study_rails'
+  put  '/study_docker',   to: 'word#study_docker'
 
   root 'word#home'
   resources :word do

@@ -60,8 +60,18 @@ class WordController < ApplicationController
 
   def study_rails
     puts 'search_rails --------------'
+    Rails.cache.write('search', '%Rails%')
+    study_get
+  end
+  def study_docker
+    puts 'search_docker --------------'
+    Rails.cache.write('search', '%Docker%')
+    study_get
+  end
+  def study_get
+    @search = Rails.cache.read('search')
     # @words = Word.where('key LIKE ?', "%Rails%").order(id: "ASC").first
-    id = Word.where('key LIKE ?', "%Rails%").pluck(:id)
+    id = Word.where('key LIKE ?', @search).pluck(:id)
     # 任意のID取得
     idx = id.sample
     @words = Word.find_by(id: idx)
@@ -72,7 +82,7 @@ class WordController < ApplicationController
 
     Rails.cache.write('cnt_all', @cnt_all.to_s)
     Rails.cache.write('cnt', @cnt.to_s)
-end
+  end
 
   def search
     puts 'search --------------'
@@ -92,7 +102,8 @@ end
     # @words = Word.next(params[:id])
     # @words = Word.where("id > ?", params[:id]).order("id ASC").first
 
-    @words = Word.where("(key LIKE ?) and (id > ?)","%Rails%" , params[:id]).order(id: "ASC").first
+    @search = Rails.cache.read('search')
+    @words = Word.where("(key LIKE ?) and (id > ?)",@search , params[:id]).order(id: "ASC").first
     if @words.nil?
       #TODO フラッシュほしい
       redirect_to action: 'home'
@@ -101,10 +112,13 @@ end
     end
   end
   def study_back
-    @cnt_all = Word.where('key LIKE ?', "%Rails%").count
+
+    @search = Rails.cache.read('search')
+
+    @cnt_all = Word.where('key LIKE ?', @search).count
     @cnt = Rails.cache.read('cnt').to_i - 1
     Rails.cache.write('cnt', @cnt.to_s)
-    @words = Word.where("(key LIKE ?) and (id < ?)","%Rails%" , params[:id]).order(id: "DESC").first
+    @words = Word.where("(key LIKE ?) and (id < ?)",@search , params[:id]).order(id: "DESC").first
     if @words.nil?
       #TODO フラッシュほしい
       redirect_to action: 'home'

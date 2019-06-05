@@ -2,6 +2,7 @@
      <%= link_to "CSV", root_path(format: :csv), class: "btn btn-success" , data: {confirm: 'CSV?'} %>
      <%= link_to 'Study!', study_word_path(0), method: :put, class: 'btn btn-primary' %>
      <%= link_to 'Rails!', study_rails_path, method: :put, class: 'btn btn-primary' %>
+     <%= link_to 'Docker!', study_docker_path, method: :put, class: 'btn btn-primary' %>
 
      <%= link_to 'DELETE', del_all_word_path(0), method: :delete, class:'pull-right btn btn-danger' , data: {confirm: 'ALL DELETE!? Sure?'}%>
 
