@@ -10,7 +10,16 @@
      <h3>Please check words..</h3> <button id="btnDown" href="#end">scroll</button>
 
      <%= search_form_for @q, url: search_path  do |f| %>
-     <%= f.search_field :key_cont %>
+
+     <%= label_tag(:page_name, "all") %>
+     <%= radio_button_tag(:page, "all", {checked:true}) %>
+     <%= label_tag(:page_name, "Rails") %>
+     <%= radio_button_tag(:page, "Rails") %>
+     <%= label_tag(:page_name, "Vue") %>
+     <%= radio_button_tag(:page, "Vue") %>
+     <%= label_tag(:page_name, "Docker") %>
+     <%= radio_button_tag(:page, "Docker") %>
+
      <%= f.submit  class: "btn"%>
      <% end %>
 

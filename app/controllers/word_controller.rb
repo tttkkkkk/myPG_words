@@ -88,9 +88,17 @@ class WordController < ApplicationController
     puts 'search --------------'
     # @q = Word.ransack(params[:q])
     # @q = Word.ransack(params[:q]).ransack(s: "check ASC")
+
+    # binding.pry
+
+    # ラジオボタンの選択値を検索条件にする（テキストボックスは削除）
+    params[:q] = {key_cont: params[:page] }
+    # allの場合は検索条件なし
+    params[:q] = '' if params[:page] == 'all'
     @q = Word.ransack(params[:q])
     @words = @q.result(distinct: true)
     @words = @words.order(check: "ASC", id: "ASC")
+
     render 'home'
   end
 
