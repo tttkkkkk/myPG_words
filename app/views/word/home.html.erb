@@ -11,13 +11,13 @@
 
      <%= search_form_for @q, url: search_path  do |f| %>
 
-     <%= label_tag(:page_name, "all") %>
+     <%= label_tag(:page_all, "all") %>
      <%= radio_button_tag(:page, "all", {checked:true}) %>
-     <%= label_tag(:page_name, "Rails") %>
+     <%= label_tag(:page_Rails, "Rails") %>
      <%= radio_button_tag(:page, "Rails") %>
-     <%= label_tag(:page_name, "Vue") %>
+     <%= label_tag(:page_Vue, "Vue") %>
      <%= radio_button_tag(:page, "Vue") %>
-     <%= label_tag(:page_name, "Docker") %>
+     <%= label_tag(:page_Docker, "Docker") %>
      <%= radio_button_tag(:page, "Docker") %>
 
      <%= f.submit  class: "btn"%>
