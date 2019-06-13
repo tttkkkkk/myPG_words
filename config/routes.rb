@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get  '/search',   to: 'word#search'
 
   put  '/study_rails',   to: 'word#study_rails'
-  put  '/study_docker',   to: 'word#study_docker'
+  put  '/study_docker',  to: 'word#study_docker'
+  put  '/study',         to: 'word#study'
 
   root 'word#home'
   resources :word do
@@ -15,7 +16,6 @@ Rails.application.routes.draw do
       put 'study_next'
       put 'study_back'
 
-      put 'study'
       put 'upd_add'
       put 'upd_mns'
       delete 'del_all'

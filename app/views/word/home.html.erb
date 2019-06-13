@@ -1,8 +1,6 @@
      <%= link_to "ADD", new_word_path , class: 'btn btn-success'%>
      <%= link_to "CSV", root_path(format: :csv), class: "btn btn-success" , data: {confirm: 'CSV?'} %>
-     <%= link_to 'Study!', study_word_path(0), method: :put, class: 'btn btn-primary' %>
-     <%= link_to 'Rails!', study_rails_path, method: :put, class: 'btn btn-primary' %>
-     <%= link_to 'Docker!', study_docker_path, method: :put, class: 'btn btn-primary' %>
+     <%= link_to 'Study!', study_path, method: :put, class: 'btn btn-primary' %>
 
      <%= link_to 'DELETE', del_all_word_path(0), method: :delete, class:'pull-right btn btn-danger' , data: {confirm: 'ALL DELETE!? Sure?'}%>
 
@@ -19,6 +17,8 @@
      <%= radio_button_tag(:page, "Vue") %>
      <%= label_tag(:page_Docker, "Docker") %>
      <%= radio_button_tag(:page, "Docker") %>
+     <%= label_tag(:page_Docker, "AWS") %>
+     <%= radio_button_tag(:page, "AWS") %>
 
      <%= f.submit  class: "btn"%>
      <% end %>

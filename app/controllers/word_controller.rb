@@ -46,16 +46,7 @@ class WordController < ApplicationController
 
   def study
     puts 'search --------------'
-    # #検索結果が得られない。。（保留中 2019/5/29
-    # @q = Word.ransack(params[:q])
-    # @words = @q.result(distinct: true)
-    @words = Word.limit(10).order(check: "ASC")
-    @keys = @words.pluck(:key)
-    puts @keys.length
-    puts @keys
-
-    @words_json = @keys.to_json.html_safe
-    puts @words_json
+    study_get
   end
 
   def study_rails
@@ -71,7 +62,11 @@ class WordController < ApplicationController
   def study_get
     @search = Rails.cache.read('search')
     # @words = Word.where('key LIKE ?', "%Rails%").order(id: "ASC").first
-    id = Word.where('key LIKE ?', @search).pluck(:id)
+    if @search != ''
+      id = Word.where('key LIKE ?', @search).pluck(:id)
+    else
+      id = Word.pluck(:id)
+    end
     # 任意のID取得
     idx = id.sample
     @words = Word.find_by(id: idx)
@@ -89,12 +84,16 @@ class WordController < ApplicationController
     # @q = Word.ransack(params[:q])
     # @q = Word.ransack(params[:q]).ransack(s: "check ASC")
 
-    # binding.pry
-
     # ラジオボタンの選択値を検索条件にする（テキストボックスは削除）
-    params[:q] = {key_cont: params[:page] }
-    # allの場合は検索条件なし
-    params[:q] = '' if params[:page] == 'all'
+    if params[:page] == 'all'
+      # allの場合は検索条件なし
+      params[:q] = ''
+      Rails.cache.write('search', '')
+    else
+      params[:q] = {key_cont: params[:page] }
+      Rails.cache.write('search', '%'+params[:page]+'%')
+    end
+
     @q = Word.ransack(params[:q])
     @words = @q.result(distinct: true)
     @words = @words.order(check: "ASC", id: "ASC")
